@@ -14,7 +14,7 @@
 
   /* ─── Accent Colors (shared across themes) ─── */
   --accent-cyan: #00a8cc;
-  --accent-coral: #e85d4a;
+  --accent-coral: #c9402e;
   --accent-lime: #6baf2e;
   --accent-amber: #d4960a;
 
@@ -60,7 +60,7 @@
   --stroke-active: rgba(130, 170, 255, 0.15);
 
   --accent-cyan: #00d4ff;
-  --accent-coral: #ff6b5a;
+  --accent-coral: #c43a28;
   --accent-lime: #c4ff4d;
   --accent-amber: #ffb830;
 
