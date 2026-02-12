@@ -60,6 +60,9 @@ importers:
       prettier:
         specifier: ^3.8.1
         version: 3.8.1
+      prettier-plugin-tailwind-css:
+        specifier: ^1.5.0
+        version: 1.5.0
       tailwindcss:
         specifier: ^4
         version: 4.1.18
