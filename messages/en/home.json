@@ -1,0 +1,64 @@
+{
+  "hero": {
+    "headline": "Software Engineer &\nExperience Architect",
+    "subheadline": "I design with the precision of an architect and bring ideas to life with polished interfaces. Specialized in system design, UX, and scalable architectures.",
+    "cta": {
+      "viewProjects": "View projects",
+      "getInTouch": "Let's talk"
+    },
+    "visual": {
+      "wireframeAlt": "Wireframe transforming into a finished interface",
+      "label": "Blueprint → Product"
+    }
+  },
+  "featuredProjects": {
+    "heading": "Featured Projects",
+    "description": "Case studies where I combined design, architecture, and product thinking.",
+    "viewAll": "View all projects",
+    "cards": {
+      "magneto": {
+        "title": "Component Library Migration",
+        "summary": "Led a React/TypeScript component library migration with Storybook for Next.js applications, cutting CLS by 15% and boosting Core Web Vitals.",
+        "tags": "React, TypeScript, Storybook, Next.js"
+      },
+      "agriculture": {
+        "title": "Smart Agriculture IoT",
+        "summary": "Developed an Arduino-based automated irrigation system with scalable architecture for crop data collection and water optimization.",
+        "tags": "Arduino, IoT, Architecture, Python"
+      },
+      "hrPlatform": {
+        "title": "HR Platform",
+        "summary": "Built responsive HR platform features with multilingual support, optimizing bundle size and improving load times by 15%.",
+        "tags": "React, TypeScript, i18n, Redux"
+      }
+    }
+  },
+  "process": {
+    "heading": "My Process — Blueprint to Product",
+    "steps": {
+      "blueprint": {
+        "label": "Step 1",
+        "title": "Blueprint",
+        "description": "Requirements analysis, system design, architecture diagrams. Understanding the problem before writing a single line of code."
+      },
+      "prototype": {
+        "label": "Step 2",
+        "title": "Prototype",
+        "description": "Wireframes, rapid iteration, and testing. Validating ideas early with real feedback before committing to full implementation."
+      },
+      "ship": {
+        "label": "Step 3",
+        "title": "Ship",
+        "description": "Production-grade architecture, infrastructure setup, deployment pipelines. Building for scale, performance, and reliability."
+      }
+    }
+  },
+  "contactCta": {
+    "heading": "Want to collaborate?",
+    "description": "Let's talk about product, architecture, or engineering challenges.",
+    "actions": {
+      "sendMessage": "Send a message",
+      "downloadCv": "Download CV"
+    }
+  }
+}

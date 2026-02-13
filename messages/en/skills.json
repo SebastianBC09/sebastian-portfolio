@@ -1,0 +1,35 @@
+{
+  "hero": {
+    "headline": "Skills & Expertise",
+    "subheadline": "Technologies, tools, and practices I use to build scalable, performant software."
+  },
+  "categories": {
+    "frontend": {
+      "title": "Frontend",
+      "description": "Building polished, accessible, and performant user interfaces."
+    },
+    "backend": {
+      "title": "Backend",
+      "description": "Designing APIs, services, and data layers that scale."
+    },
+    "cloud": {
+      "title": "Cloud & DevOps",
+      "description": "Infrastructure, deployment pipelines, and cloud architecture."
+    },
+    "tools": {
+      "title": "Tools & Practices",
+      "description": "Version control, testing, documentation, and development workflow."
+    }
+  },
+  "certifications": {
+    "heading": "Certifications",
+    "gcp": {
+      "title": "Google Cloud Associate Cloud Engineer",
+      "issuer": "Google Cloud"
+    }
+  },
+  "metadata": {
+    "title": "Skills — Sebastian Ballen",
+    "description": "Explore Sebastian Ballen's technical skills across frontend, backend, cloud, and DevOps — including React, TypeScript, Node.js, GCP, AWS, and Docker."
+  }
+}

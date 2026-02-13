@@ -1,0 +1,30 @@
+{
+  "header": {
+    "nav": {
+      "projects": "Proyectos",
+      "about": "Sobre mí",
+      "skills": "Habilidades",
+      "blog": "Blog",
+      "contact": "Contacto"
+    },
+    "actions": {
+      "openMenu": "Abrir menú",
+      "closeMenu": "Cerrar menú",
+      "toggleTheme": "Cambiar tema",
+      "switchLanguage": "Switch to English"
+    },
+    "logoAlt": "Sebastian Ballen — Ingeniero de Software"
+  },
+  "footer": {
+    "copyright": "© {year} Sebastian Ballen — Ingeniero Diseñador",
+    "tagline": "Blueprints que cobran vida.",
+    "links": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn"
+    }
+  },
+  "metadata": {
+    "siteTitle": "Sebastian Ballen — Ingeniero de Software Full-Stack",
+    "siteDescription": "Ingeniero de Software que diseña experiencias digitales con la precisión de un arquitecto y la creatividad de un diseñador. Portafolio de proyectos full-stack, arquitectura cloud y sistemas escalables."
+  }
+}

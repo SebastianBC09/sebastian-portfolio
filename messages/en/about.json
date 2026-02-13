@@ -1,0 +1,44 @@
+{
+  "hero": {
+    "headline": "About Me",
+    "introduction": "I'm Sebastian Ballen — a Full-Stack Software Developer and Google Cloud Associate Cloud Engineer based in Bogotá, Colombia. I build digital experiences with the precision of an architect and the creativity of a designer."
+  },
+  "journey": {
+    "heading": "My Journey",
+    "sections": {
+      "origin": {
+        "title": "From Curiosity to Code",
+        "description": "My path into software engineering started with a fascination for how digital products work under the hood. Studying Computer Technology at Lake Superior College in Minnesota gave me the technical foundation, while the multicultural experience shaped how I think about building products for diverse audiences."
+      },
+      "growth": {
+        "title": "Building at Scale",
+        "description": "At Magneto Global, I went from frontend specialist to full-stack engineer — leading component library migrations, building backend services on AWS, and resolving critical bugs that reduced system errors by 95%. Every challenge taught me that great software is as much about architecture and process as it is about code."
+      },
+      "present": {
+        "title": "Engineering with Purpose",
+        "description": "Today I'm pursuing my Software Engineering degree while continuing to build. My focus is on scalable systems, cloud architecture, and the intersection of design and engineering. I believe the best products come from engineers who think like architects and design like artists."
+      }
+    }
+  },
+  "values": {
+    "heading": "How I Work",
+    "items": {
+      "precision": {
+        "title": "Precision",
+        "description": "Clean code, tested architecture, and measurable outcomes."
+      },
+      "curiosity": {
+        "title": "Curiosity",
+        "description": "Continuous learning and experimentation with new tools and patterns."
+      },
+      "clarity": {
+        "title": "Clarity",
+        "description": "Documentation, knowledge sharing, and making complex things understandable."
+      }
+    }
+  },
+  "metadata": {
+    "title": "About — Sebastian Ballen",
+    "description": "Learn about Sebastian Ballen's journey as a Full-Stack Software Engineer, his approach to building digital products, and what drives his work."
+  }
+}

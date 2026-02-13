@@ -1,0 +1,30 @@
+{
+  "header": {
+    "nav": {
+      "projects": "Projects",
+      "about": "About",
+      "skills": "Skills",
+      "blog": "Blog",
+      "contact": "Contact"
+    },
+    "actions": {
+      "openMenu": "Open menu",
+      "closeMenu": "Close menu",
+      "toggleTheme": "Toggle theme",
+      "switchLanguage": "Cambiar a Español"
+    },
+    "logoAlt": "Sebastian Ballen — Software Engineer"
+  },
+  "footer": {
+    "copyright": "© {year} Sebastian Ballen — Designer Engineer",
+    "tagline": "Blueprints that come to life.",
+    "links": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn"
+    }
+  },
+  "metadata": {
+    "siteTitle": "Sebastian Ballen — Full-Stack Software Engineer",
+    "siteDescription": "Software Engineer who designs digital experiences with the precision of an architect and the creativity of a designer. Portfolio showcasing full-stack projects, cloud architecture, and scalable systems."
+  }
+}

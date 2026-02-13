@@ -1,0 +1,64 @@
+{
+  "hero": {
+    "headline": "Ingeniero de Software y\nArquitecto de Experiencias",
+    "subheadline": "Diseño con precisión de arquitecto y doy vida a ideas con interfaces pulidas. Me especializo en diseño de sistemas, UX y arquitecturas escalables.",
+    "cta": {
+      "viewProjects": "Ver proyectos",
+      "getInTouch": "Hablemos"
+    },
+    "visual": {
+      "wireframeAlt": "Wireframe transformándose en una interfaz terminada",
+      "label": "Blueprint → Producto"
+    }
+  },
+  "featuredProjects": {
+    "heading": "Proyectos Destacados",
+    "description": "Casos donde combiné diseño, arquitectura y pensamiento de producto.",
+    "viewAll": "Ver todos los proyectos",
+    "cards": {
+      "magneto": {
+        "title": "Migración de Librería de Componentes",
+        "summary": "Lideré la migración de una librería de componentes React/TypeScript con Storybook para aplicaciones Next.js, reduciendo el CLS en un 15% y mejorando Core Web Vitals.",
+        "tags": "React, TypeScript, Storybook, Next.js"
+      },
+      "agriculture": {
+        "title": "Agricultura Inteligente IoT",
+        "summary": "Desarrollé un sistema de riego automatizado basado en Arduino con arquitectura escalable para recolección de datos de cultivos y optimización del agua.",
+        "tags": "Arduino, IoT, Arquitectura, Python"
+      },
+      "hrPlatform": {
+        "title": "Plataforma de Recursos Humanos",
+        "summary": "Construí funcionalidades responsivas para una plataforma de RRHH con soporte multilingüe, optimizando el tamaño del bundle y mejorando los tiempos de carga en un 15%.",
+        "tags": "React, TypeScript, i18n, Redux"
+      }
+    }
+  },
+  "process": {
+    "heading": "Mi Proceso — De Blueprint a Producto",
+    "steps": {
+      "blueprint": {
+        "label": "Paso 1",
+        "title": "Blueprint",
+        "description": "Análisis de requisitos, diseño de sistemas, diagramas de arquitectura. Entender el problema antes de escribir una sola línea de código."
+      },
+      "prototype": {
+        "label": "Paso 2",
+        "title": "Prototipo",
+        "description": "Wireframes, iteración rápida y testing. Validar ideas temprano con feedback real antes de comprometerse con la implementación completa."
+      },
+      "ship": {
+        "label": "Paso 3",
+        "title": "Ship",
+        "description": "Arquitectura de producción, configuración de infraestructura, pipelines de despliegue. Construir para escala, rendimiento y confiabilidad."
+      }
+    }
+  },
+  "contactCta": {
+    "heading": "¿Quieres colaborar?",
+    "description": "Hablemos de producto, arquitectura o desafíos de ingeniería.",
+    "actions": {
+      "sendMessage": "Enviar mensaje",
+      "downloadCv": "Descargar CV"
+    }
+  }
+}

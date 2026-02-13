@@ -1,0 +1,46 @@
+{
+  "hero": {
+    "headline": "Get in Touch",
+    "subheadline": "Have a project in mind, want to discuss architecture, or just want to connect? I'd love to hear from you."
+  },
+  "form": {
+    "fields": {
+      "name": {
+        "label": "Your name",
+        "placeholder": "John Doe"
+      },
+      "email": {
+        "label": "Your email",
+        "placeholder": "john@example.com"
+      },
+      "subject": {
+        "label": "Subject",
+        "placeholder": "Project collaboration"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Tell me about your project or idea..."
+      }
+    },
+    "actions": {
+      "submit": "Send message",
+      "submitting": "Sending..."
+    },
+    "feedback": {
+      "success": "Message sent! I'll get back to you soon.",
+      "error": "Something went wrong. Please try again or email me directly."
+    }
+  },
+  "alternatives": {
+    "heading": "Or reach me directly",
+    "email": "sebastian.ballenc@gmail.com",
+    "links": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn"
+    }
+  },
+  "metadata": {
+    "title": "Contact — Sebastian Ballen",
+    "description": "Get in touch with Sebastian Ballen for project collaboration, architecture consulting, or engineering mentoring."
+  }
+}

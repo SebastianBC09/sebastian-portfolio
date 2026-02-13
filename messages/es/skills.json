@@ -1,0 +1,35 @@
+{
+  "hero": {
+    "headline": "Habilidades y Experiencia",
+    "subheadline": "Tecnologías, herramientas y prácticas que uso para construir software escalable y de alto rendimiento."
+  },
+  "categories": {
+    "frontend": {
+      "title": "Frontend",
+      "description": "Construyendo interfaces de usuario pulidas, accesibles y de alto rendimiento."
+    },
+    "backend": {
+      "title": "Backend",
+      "description": "Diseñando APIs, servicios y capas de datos que escalan."
+    },
+    "cloud": {
+      "title": "Cloud y DevOps",
+      "description": "Infraestructura, pipelines de despliegue y arquitectura cloud."
+    },
+    "tools": {
+      "title": "Herramientas y Prácticas",
+      "description": "Control de versiones, testing, documentación y flujo de desarrollo."
+    }
+  },
+  "certifications": {
+    "heading": "Certificaciones",
+    "gcp": {
+      "title": "Google Cloud Associate Cloud Engineer",
+      "issuer": "Google Cloud"
+    }
+  },
+  "metadata": {
+    "title": "Habilidades — Sebastian Ballen",
+    "description": "Explora las habilidades técnicas de Sebastian Ballen en frontend, backend, cloud y DevOps — incluyendo React, TypeScript, Node.js, GCP, AWS y Docker."
+  }
+}

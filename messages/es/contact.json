@@ -1,0 +1,46 @@
+{
+  "hero": {
+    "headline": "Contacto",
+    "subheadline": "¿Tienes un proyecto en mente, quieres hablar de arquitectura o simplemente conectar? Me encantaría saber de ti."
+  },
+  "form": {
+    "fields": {
+      "name": {
+        "label": "Tu nombre",
+        "placeholder": "Juan Pérez"
+      },
+      "email": {
+        "label": "Tu email",
+        "placeholder": "juan@ejemplo.com"
+      },
+      "subject": {
+        "label": "Asunto",
+        "placeholder": "Colaboración en proyecto"
+      },
+      "message": {
+        "label": "Mensaje",
+        "placeholder": "Cuéntame sobre tu proyecto o idea..."
+      }
+    },
+    "actions": {
+      "submit": "Enviar mensaje",
+      "submitting": "Enviando..."
+    },
+    "feedback": {
+      "success": "¡Mensaje enviado! Te responderé pronto.",
+      "error": "Algo salió mal. Por favor intenta de nuevo o escríbeme directamente."
+    }
+  },
+  "alternatives": {
+    "heading": "O contáctame directamente",
+    "email": "sebastian.ballenc@gmail.com",
+    "links": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn"
+    }
+  },
+  "metadata": {
+    "title": "Contacto — Sebastian Ballen",
+    "description": "Contacta a Sebastian Ballen para colaboración en proyectos, consultoría de arquitectura o mentoría en ingeniería."
+  }
+}

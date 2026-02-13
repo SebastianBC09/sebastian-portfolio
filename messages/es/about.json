@@ -1,0 +1,44 @@
+{
+  "hero": {
+    "headline": "Sobre Mí",
+    "introduction": "Soy Sebastian Ballen — Desarrollador de Software Full-Stack e Ingeniero Asociado en Google Cloud, basado en Bogotá, Colombia. Construyo experiencias digitales con la precisión de un arquitecto y la creatividad de un diseñador."
+  },
+  "journey": {
+    "heading": "Mi Trayectoria",
+    "sections": {
+      "origin": {
+        "title": "De la Curiosidad al Código",
+        "description": "Mi camino hacia la ingeniería de software comenzó con la fascinación por cómo funcionan los productos digitales. Estudiar Tecnología Computacional en Lake Superior College en Minnesota me dio la base técnica, mientras que la experiencia multicultural moldeó mi forma de pensar sobre construir productos para audiencias diversas."
+      },
+      "growth": {
+        "title": "Construyendo a Escala",
+        "description": "En Magneto Global, pasé de especialista frontend a ingeniero full-stack — liderando migraciones de librerías de componentes, construyendo servicios backend en AWS y resolviendo bugs críticos que redujeron errores del sistema en un 95%. Cada desafío me enseñó que el gran software es tanto sobre arquitectura y proceso como sobre código."
+      },
+      "present": {
+        "title": "Ingeniería con Propósito",
+        "description": "Hoy estoy cursando mi carrera de Ingeniería de Software mientras sigo construyendo. Mi enfoque está en sistemas escalables, arquitectura cloud y la intersección entre diseño e ingeniería. Creo que los mejores productos vienen de ingenieros que piensan como arquitectos y diseñan como artistas."
+      }
+    }
+  },
+  "values": {
+    "heading": "Cómo Trabajo",
+    "items": {
+      "precision": {
+        "title": "Precisión",
+        "description": "Código limpio, arquitectura testeada y resultados medibles."
+      },
+      "curiosity": {
+        "title": "Curiosidad",
+        "description": "Aprendizaje continuo y experimentación con nuevas herramientas y patrones."
+      },
+      "clarity": {
+        "title": "Claridad",
+        "description": "Documentación, compartir conocimiento y hacer lo complejo comprensible."
+      }
+    }
+  },
+  "metadata": {
+    "title": "Sobre Mí — Sebastian Ballen",
+    "description": "Conoce la trayectoria de Sebastian Ballen como Ingeniero de Software Full-Stack, su enfoque para construir productos digitales y lo que impulsa su trabajo."
+  }
+}
