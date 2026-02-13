@@ -10,7 +10,7 @@ on:
     branches: [main]
 
 env:
-  APP_DIR: /opt/sebastian-portfolio
+  APP_DIR: /var/www/bccloudsolutions.dev
 
 jobs:
   # Job 1: Lint and type-check
