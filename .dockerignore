@@ -1,0 +1,17 @@
+# Node specific
+node_modules
+npm-debug.log
+
+# Next.js build output
+.next
+
+# Project management
+.git
+.gitignore
+README.md
+LICENSE
+
+# Docker specific
+Dockerfile
+.dockerignore
+docker-compose*.yml
