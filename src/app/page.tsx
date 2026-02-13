@@ -1,9 +1,11 @@
 import { Button } from '@/components/ui';
 import { Badge } from '@/components/ui';
+import { UnderConstruction } from '@/components/ui/UnderConstruction';
 
 export default function Home() {
   return (
     <section className="relative z-10 pt-28">
+      <UnderConstruction className="mx-auto mt-6 max-w-2xl" />
       <div className="mx-auto max-w-280 px-6 py-20">
         {/* Status badge */}
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-(--bg-card) border border-(--stroke) mb-6">
