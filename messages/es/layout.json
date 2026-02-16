@@ -10,18 +10,22 @@
     "actions": {
       "openMenu": "Abrir menú",
       "closeMenu": "Cerrar menú",
-      "toggleTheme": "Cambiar tema",
-      "switchLanguage": "Switch to English"
+      "toggleTheme": "Cambiar tema"
     },
     "logoAlt": "Sebastian Ballen — Ingeniero de Software"
   },
   "footer": {
     "copyright": "© {year} Sebastian Ballen — Ingeniero Diseñador",
     "tagline": "Blueprints que cobran vida.",
+    "builtWith": "Hecho con Next.js, TypeScript y Tailwind CSS",
     "links": {
       "github": "GitHub",
       "linkedin": "LinkedIn"
     }
+  },
+  "languageSwitcher": {
+    "label": "Cambiar idioma",
+    "switchTo": "Switch to English"
   },
   "metadata": {
     "siteTitle": "Sebastian Ballen — Ingeniero de Software Full-Stack",

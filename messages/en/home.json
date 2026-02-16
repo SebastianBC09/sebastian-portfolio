@@ -54,11 +54,11 @@
     }
   },
   "contactCta": {
-    "heading": "Want to collaborate?",
-    "description": "Let's talk about product, architecture, or engineering challenges.",
-    "actions": {
-      "sendMessage": "Send a message",
-      "downloadCv": "Download CV"
+    "title": "Want to collaborate?",
+    "subtitle": "Let's talk about product, architecture, or engineering challenges.",
+    "cta": {
+      "email": "Send a message",
+      "cv": "Download CV"
     }
   }
 }

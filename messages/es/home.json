@@ -54,11 +54,11 @@
     }
   },
   "contactCta": {
-    "heading": "¿Quieres colaborar?",
-    "description": "Hablemos de producto, arquitectura o desafíos de ingeniería.",
-    "actions": {
-      "sendMessage": "Enviar mensaje",
-      "downloadCv": "Descargar CV"
+    "title": "¿Quieres colaborar?",
+    "subtitle": "Hablemos de producto, arquitectura o desafíos de ingeniería.",
+    "cta": {
+      "email": "Enviar mensaje",
+      "cv": "Descargar CV"
     }
   }
 }
