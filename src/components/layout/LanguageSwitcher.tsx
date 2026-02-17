@@ -1,33 +1,54 @@
 'use client';
 
 import { useTransition } from 'react';
-import { useLocale, useTranslations } from 'next-intl';
+import { useLocale } from 'next-intl';
 import { usePathname, useRouter } from '@/i18n/navigation';
+import { cn } from '@/lib/utils';
+
+const LOCALES = ['en', 'es'] as const;
 
 export function LanguageSwitcher() {
-  const t = useTranslations('layout.languageSwitcher');
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
   const [isPending, startTransition] = useTransition();
 
-  const targetLocale = locale === 'en' ? 'es' : 'en';
-
-  function handleSwitch() {
+  function handleSwitch(target: string) {
+    if (target === locale) return;
     startTransition(() => {
-      router.replace(pathname, { locale: targetLocale });
+      router.replace(pathname, { locale: target });
     });
   }
 
   return (
-    <button
-      onClick={handleSwitch}
-      disabled={isPending}
-      className="px-2.5 py-1.5 text-xs font-mono font-medium rounded-md border border-(--stroke-grid) text-(--text-secondary) hover:text-(--text-primary) hover:border-(--stroke-grid-hover) hover:bg-(--bg-card) transition-colors uppercase tracking-wider disabled:opacity-50"
-      aria-label={t('switchTo')}
-      title={t('switchTo')}
+    <div
+      className={cn(
+        'flex gap-0.5 p-0.5 rounded-md border border-(--stroke)',
+        isPending && 'opacity-50 pointer-events-none'
+      )}
+      role="radiogroup"
+      aria-label="Language"
     >
-      {isPending ? '...' : targetLocale}
-    </button>
+      {LOCALES.map((l) => {
+        const isActive = locale === l;
+
+        return (
+          <button
+            key={l}
+            onClick={() => handleSwitch(l)}
+            role="radio"
+            aria-checked={isActive}
+            className={cn(
+              'px-2 py-1 rounded-sm text-[11px] font-mono font-semibold uppercase tracking-wider transition-all cursor-pointer',
+              isActive
+                ? 'bg-(--accent-cyan)/15 text-(--accent-cyan)'
+                : 'text-(--text-muted) hover:text-(--text-primary)'
+            )}
+          >
+            {l.toUpperCase()}
+          </button>
+        );
+      })}
+    </div>
   );
 }
