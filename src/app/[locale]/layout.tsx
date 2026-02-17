@@ -6,9 +6,10 @@ import { Outfit, DM_Sans, JetBrains_Mono } from 'next/font/google';
 
 import { routing } from '@/i18n/routing';
 import { ThemeProvider } from '@/components/providers/ThemeProvider';
+import { BlueprintAnnotations } from '@/components/sections/BlueprintAnnotations';
+import { BlueprintGrid } from '@/components/layout/BlueprintGrid';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
-
 import '../globals.css';
 
 const outfit = Outfit({
@@ -109,7 +110,8 @@ export default async function LocaleLayout({
       <body className="min-h-screen bg-(--bg-primary) text-(--text-primary) font-body antialiased">
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>
-            <div className="fixed inset-0 pointer-events-none z-0 blueprint-grid opacity-[0.03]" />
+            <BlueprintGrid />
+            <BlueprintAnnotations />
             <div className="relative z-10 flex min-h-screen flex-col">
               <Header />
               <main className="flex-1">{children}</main>
