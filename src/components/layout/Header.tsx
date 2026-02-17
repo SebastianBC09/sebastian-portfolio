@@ -11,7 +11,7 @@ import { Menu, X } from 'lucide-react';
 const NAV_KEYS = ['projects', 'about', 'skills', 'blog', 'contact'] as const;
 
 const NAV_HREFS: Record<(typeof NAV_KEYS)[number], string> = {
-  projects: '/#projects',
+  projects: '/projects',
   about: '/about',
   skills: '/skills',
   blog: '/blog',
@@ -26,7 +26,7 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      setIsScrolled(window.scrollY > 40);
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
@@ -40,30 +40,42 @@ export function Header() {
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        isScrolled
-          ? 'bg-(--bg-primary)/80 backdrop-blur-xl border-b border-(--stroke-grid)'
-          : 'bg-transparent'
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-500',
+        isScrolled ? 'border-b border-(--accent-cyan)/8' : 'border-b border-transparent'
       )}
+      style={{
+        background: isScrolled
+          ? 'color-mix(in srgb, var(--bg-primary) 88%, transparent)'
+          : 'transparent',
+        backdropFilter: isScrolled ? 'blur(20px) saturate(1.4)' : 'none',
+      }}
     >
       <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        {/* Logo */}
+        {/* ── Logo ── */}
         <Link
           href="/"
           onClick={() => setIsMobileOpen(false)}
           className="flex items-center gap-3 group"
           aria-label={t('logoAlt')}
         >
-          <div className="w-9 h-9 rounded-md flex items-center justify-center border border-(--stroke-grid) bg-(--bg-card) group-hover:border-(--accent-cyan)/40 transition-colors">
-            <span className="font-display font-bold text-sm text-(--text-primary)">SB</span>
+          <div
+            className={cn(
+              'w-10 h-10 rounded-[10px] flex items-center justify-center',
+              'font-mono font-bold text-sm',
+              'bg-(--accent-cyan)/10 border-[1.5px] border-(--accent-cyan)/25',
+              'text-(--accent-cyan)',
+              'group-hover:scale-105 transition-transform duration-300'
+            )}
+          >
+            SB
           </div>
-          <span className="hidden sm:inline text-sm font-medium text-(--text-secondary) group-hover:text-(--text-primary) transition-colors">
+          <span className="hidden sm:inline text-sm font-medium text-(--text-muted) group-hover:text-(--text-primary) transition-colors">
             bccloudsolutions.dev
           </span>
         </Link>
 
-        {/* Desktop nav */}
-        <div className="hidden md:flex items-center gap-1">
+        {/* ── Desktop nav ── */}
+        <div className="hidden md:flex items-center gap-2">
           {NAV_KEYS.map((key) => {
             const href = NAV_HREFS[key];
             const isActive = checkIsActive(href);
@@ -73,10 +85,10 @@ export function Header() {
                 key={key}
                 href={href}
                 className={cn(
-                  'px-3 py-2 text-sm rounded-md transition-colors',
+                  'px-4 py-2 text-sm rounded-lg transition-colors',
                   isActive
                     ? 'text-(--text-primary) bg-(--bg-card)'
-                    : 'text-(--text-secondary) hover:text-(--text-primary) hover:bg-(--bg-card)/50'
+                    : 'text-(--text-muted) hover:text-(--text-primary) hover:bg-(--text-primary)/5'
                 )}
               >
                 {t(`nav.${key}`)}
@@ -84,55 +96,88 @@ export function Header() {
             );
           })}
 
-          <div className="ml-3 flex items-center gap-2 pl-3 border-l border-(--stroke-grid)">
-            <LanguageSwitcher />
+          {/* Contact CTA */}
+          <Link
+            href="/contact"
+            className={cn(
+              'px-4 py-2 text-sm font-semibold rounded-lg transition-all',
+              'bg-(--accent-coral)/12 text-(--accent-coral)',
+              'border border-(--accent-coral)/25',
+              'hover:bg-(--accent-coral)/20 hover:border-(--accent-coral)/40'
+            )}
+          >
+            {t('nav.contact')}
+          </Link>
+
+          {/* Separator */}
+          <div className="w-px h-6 bg-(--stroke) ml-2 mr-2" />
+
+          {/* Language + Theme */}
+          <LanguageSwitcher />
+          <div className="">
             <ThemeToggle />
           </div>
         </div>
 
-        {/* Mobile toggle */}
-        <div className="md:hidden flex items-center gap-2">
+        {/* ── Mobile toggle ── */}
+        <div className="flex md:hidden items-center gap-2">
           <LanguageSwitcher />
           <ThemeToggle />
           <button
-            onClick={() => setIsMobileOpen(!isMobileOpen)}
-            className="p-2 rounded-md text-(--text-secondary) hover:text-(--text-primary) hover:bg-(--bg-card) transition-colors"
+            onClick={() => setIsMobileOpen((prev) => !prev)}
+            className="p-2 rounded-lg text-(--text-primary) hover:bg-(--bg-card) transition-colors"
             aria-label={isMobileOpen ? t('actions.closeMenu') : t('actions.openMenu')}
           >
             {isMobileOpen ? (
-              <X size={20} strokeWidth={1.5} />
+              <X size={22} strokeWidth={1.5} />
             ) : (
-              <Menu size={20} strokeWidth={1.5} />
+              <Menu size={22} strokeWidth={1.5} />
             )}
           </button>
         </div>
       </nav>
 
-      {/* Mobile menu */}
+      {/* ── Mobile menu ── */}
       {isMobileOpen && (
-        <div className="md:hidden bg-(--bg-primary)/95 backdrop-blur-xl border-b border-(--stroke-grid)">
-          <div className="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-1">
-            {NAV_KEYS.map((key) => {
-              const href = NAV_HREFS[key];
-              const isActive = checkIsActive(href);
+        <div
+          className="md:hidden px-6 pb-6 space-y-1 border-b border-(--stroke-grid)"
+          style={{
+            background: 'color-mix(in srgb, var(--bg-primary) 95%, transparent)',
+            backdropFilter: 'blur(20px)',
+          }}
+        >
+          {NAV_KEYS.map((key) => {
+            const href = NAV_HREFS[key];
+            const isActive = checkIsActive(href);
 
-              return (
-                <Link
-                  key={key}
-                  href={href}
-                  onClick={() => setIsMobileOpen(false)}
-                  className={cn(
-                    'px-4 py-3 text-sm rounded-md transition-colors',
-                    isActive
-                      ? 'text-(--text-primary) bg-(--bg-card)'
-                      : 'text-(--text-secondary) hover:text-(--text-primary) hover:bg-(--bg-card)/50'
-                  )}
-                >
-                  {t(`nav.${key}`)}
-                </Link>
-              );
-            })}
-          </div>
+            return (
+              <Link
+                key={key}
+                href={href}
+                onClick={() => setIsMobileOpen(false)}
+                className={cn(
+                  'block px-4 py-3 rounded-lg text-sm transition-colors',
+                  isActive
+                    ? 'text-(--text-primary) bg-(--bg-card)'
+                    : 'text-(--text-muted) hover:text-(--text-primary) hover:bg-(--text-primary)/5'
+                )}
+              >
+                {t(`nav.${key}`)}
+              </Link>
+            );
+          })}
+
+          <Link
+            href="/contact"
+            onClick={() => setIsMobileOpen(false)}
+            className={cn(
+              'block px-4 py-3 rounded-lg text-sm font-semibold transition-all',
+              'bg-(--accent-coral)/12 text-(--accent-coral)',
+              'border border-(--accent-coral)/25'
+            )}
+          >
+            {t('nav.contact')}
+          </Link>
         </div>
       )}
     </header>
