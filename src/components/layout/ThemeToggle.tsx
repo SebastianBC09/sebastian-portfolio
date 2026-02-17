@@ -14,17 +14,17 @@ export function ThemeToggle() {
     () => false
   );
 
-  if (!mounted) return <div className="w-9 h-9" />;
+  if (!mounted) return <div className="w-8.5 h-8.5" />;
 
   const isDark = resolvedTheme === 'dark';
 
   return (
     <button
       onClick={() => setTheme(isDark ? 'light' : 'dark')}
-      className="w-9 h-9 rounded-lg border border-(--stroke) bg-(--bg-card) flex items-center justify-center text-(--text-muted) hover:text-(--text-primary) transition-colors cursor-pointer"
+      className="w-8.5 h-8.5 rounded-lg border border-(--stroke) bg-(--bg-card) flex items-center justify-center text-(--text-muted) hover:text-(--text-primary) hover:border-(--stroke-active) transition-colors cursor-pointer"
       aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
     >
-      {isDark ? <Sun size={16} /> : <Moon size={16} />}
+      {isDark ? <Sun size={15} strokeWidth={1.5} /> : <Moon size={15} strokeWidth={1.5} />}
     </button>
   );
 }
