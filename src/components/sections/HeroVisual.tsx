@@ -9,115 +9,184 @@ interface HeroVisualProps {
 export function HeroVisual({ label }: HeroVisualProps) {
   return (
     <div
-      className="relative w-full aspect-4/3 rounded-2xl overflow-hidden"
-      style={{ background: 'var(--bg-card)' }}
+      className="relative w-full max-w-105 mx-auto"
+      style={{ aspectRatio: '4 / 3' }}
       aria-hidden="true"
     >
-      {/* Inner blueprint grid */}
-      <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none">
-        <defs>
-          <pattern id="hero-grid" width="32" height="32" patternUnits="userSpaceOnUse">
-            <path d="M32 0H0V32" fill="none" stroke="var(--stroke-grid)" strokeWidth="0.5" />
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#hero-grid)" />
-      </svg>
-
-      {/* Wireframe layer — fades out */}
-      <motion.div
-        className="absolute inset-4"
-        initial={{ opacity: 1 }}
-        animate={{ opacity: 0.3 }}
-        transition={{ delay: 1.2, duration: 1.5, ease: 'easeInOut' }}
+      {/* ── Wireframe card ── */}
+      <div
+        className="absolute inset-0 rounded-2xl overflow-hidden"
+        style={{
+          border: '1px solid var(--stroke-grid)',
+          background: 'var(--bg-card)',
+        }}
       >
-        {/* Header wireframe */}
-        <div className="flex items-center gap-2 mb-4">
-          <div className="w-6 h-6 rounded border border-(--text-muted)/20" />
-          <div className="h-2.5 w-20 rounded-full bg-(--text-muted)/15" />
-          <div className="ml-auto flex gap-2">
-            <div className="h-2 w-10 rounded-full bg-(--text-muted)/10" />
-            <div className="h-2 w-10 rounded-full bg-(--text-muted)/10" />
-            <div className="h-2 w-10 rounded-full bg-(--text-muted)/10" />
+        {/* Inner blueprint grid */}
+        <svg className="absolute inset-0 w-full h-full">
+          <defs>
+            <pattern id="hero-visual-grid" width="28" height="28" patternUnits="userSpaceOnUse">
+              <path d="M28 0H0V28" fill="none" stroke="var(--stroke-grid)" strokeWidth="0.4" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#hero-visual-grid)" />
+        </svg>
+
+        {/* Wireframe content — fades out */}
+        <motion.div
+          className="relative p-5 h-full flex flex-col gap-2.5"
+          initial={{ opacity: 1 }}
+          animate={{ opacity: 0.3 }}
+          transition={{ delay: 1.2, duration: 1.5, ease: 'easeInOut' }}
+        >
+          {/* Wireframe header */}
+          <div className="flex justify-between items-center">
+            <div
+              className="w-7 h-7 rounded"
+              style={{
+                border: '1px solid var(--stroke-grid)',
+                background: 'var(--bg-card)',
+              }}
+            />
+            <div className="flex gap-1.5">
+              {[1, 2, 3].map((i) => (
+                <div
+                  key={i}
+                  className="w-9 h-1.5 rounded-full"
+                  style={{ background: 'var(--stroke-grid)' }}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Wireframe text lines */}
+          <div className="flex-1 flex flex-col gap-2 mt-3">
+            <div
+              className="h-2 w-3/4 rounded-full"
+              style={{ background: 'color-mix(in srgb, var(--text-muted) 20%, transparent)' }}
+            />
+            <div
+              className="h-2 w-1/2 rounded-full"
+              style={{ background: 'color-mix(in srgb, var(--text-muted) 16%, transparent)' }}
+            />
+            <div
+              className="h-1.5 w-3/5 rounded-full mt-1"
+              style={{ background: 'color-mix(in srgb, var(--text-muted) 12%, transparent)' }}
+            />
+          </div>
+
+          {/* Wireframe cards */}
+          <div className="flex gap-2.5 mt-auto">
+            <div
+              className="flex-1 h-14 rounded-lg"
+              style={{
+                border: '1px solid var(--stroke-grid)',
+                background: 'var(--bg-card)',
+              }}
+            />
+            <div
+              className="flex-1 h-14 rounded-lg"
+              style={{
+                border: '1px solid var(--stroke-grid)',
+                background: 'var(--bg-card)',
+              }}
+            />
+          </div>
+        </motion.div>
+
+        {/* Blueprint label */}
+        <motion.div
+          className="absolute top-2 left-2.5 px-2 py-0.5 rounded text-[10px] font-mono font-medium"
+          style={{
+            color: 'var(--text-muted)',
+            background: 'var(--bg-card)',
+            border: '1px solid var(--stroke-grid)',
+          }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4, duration: 0.5 }}
+        >
+          Blueprint
+        </motion.div>
+      </div>
+
+      {/* ── Finished product overlay ── */}
+      <motion.div
+        className="absolute -bottom-3 -right-3 rounded-xl overflow-hidden"
+        style={{
+          width: '68%',
+          height: '52%',
+          background: 'linear-gradient(135deg, var(--accent-cyan), var(--accent-coral))',
+          boxShadow: '0 20px 50px rgba(0, 0, 0, 0.3)',
+          border: '1px solid var(--stroke-grid)',
+        }}
+        initial={{ opacity: 0, y: 30, scale: 0.94 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{
+          delay: 0.8,
+          duration: 0.65,
+          ease: [0.16, 1, 0.3, 1],
+        }}
+      >
+        <div className="p-3.5 h-full flex flex-col justify-between">
+          {/* Window dots */}
+          <div className="flex gap-1.5">
+            {[1, 2, 3].map((i) => (
+              <div
+                key={i}
+                className="w-2 h-2 rounded-full"
+                style={{ background: 'rgba(255, 255, 255, 0.3)' }}
+              />
+            ))}
+          </div>
+
+          {/* Content lines */}
+          <div className="flex flex-col gap-1.5">
+            <div
+              className="h-1.75 w-3/4 rounded-full"
+              style={{ background: 'rgba(255, 255, 255, 0.4)' }}
+            />
+            <div
+              className="h-1.25 w-1/2 rounded-full"
+              style={{ background: 'rgba(255, 255, 255, 0.25)' }}
+            />
+          </div>
+
+          {/* Buttons */}
+          <div className="flex gap-2">
+            <div
+              className="w-13 h-5 rounded-[5px]"
+              style={{ background: 'rgba(255, 255, 255, 0.3)' }}
+            />
+            <div
+              className="w-13 h-5 rounded-[5px]"
+              style={{ background: 'rgba(255, 255, 255, 0.15)' }}
+            />
           </div>
         </div>
 
-        {/* Content wireframe */}
-        <div className="space-y-2 mb-4">
-          <div className="h-3 w-3/4 rounded-full bg-(--text-muted)/12" />
-          <div className="h-3 w-1/2 rounded-full bg-(--text-muted)/12" />
-          <div className="h-2 w-5/6 rounded-full bg-(--text-muted)/8 mt-3" />
-          <div className="h-2 w-2/3 rounded-full bg-(--text-muted)/8" />
-        </div>
-
-        {/* Card wireframes */}
-        <div className="grid grid-cols-2 gap-2 mt-4">
-          <div className="h-16 rounded-md border border-(--text-muted)/15" />
-          <div className="h-16 rounded-md border border-(--text-muted)/15" />
-        </div>
-
-        {/* Button wireframe */}
-        <div className="mt-3 flex gap-2">
-          <div className="h-7 w-20 rounded-md border border-(--text-muted)/15" />
-          <div className="h-7 w-16 rounded-md border border-(--text-muted)/10" />
-        </div>
-      </motion.div>
-
-      {/* Colorful "life" layer — fades in */}
-      <motion.div
-        className="absolute inset-4"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1.2, ease: 'easeInOut' }}
-      >
-        {/* Colored card elements */}
+        {/* Live product label */}
         <motion.div
-          className="absolute right-0 bottom-12 w-28 h-14 rounded-lg shadow-lg"
-          style={{ background: 'var(--accent-coral)' }}
-          initial={{ x: 20, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ delay: 1.8, duration: 0.6 }}
-        />
-        <motion.div
-          className="absolute right-6 bottom-4 w-16 h-10 rounded-md shadow-md"
-          style={{ background: 'var(--accent-amber)' }}
-          initial={{ y: 10, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 2.0, duration: 0.6 }}
-        />
-        <motion.div
-          className="absolute right-24 bottom-0 w-10 h-10 rounded-full shadow-md"
-          style={{ background: 'var(--accent-cyan)' }}
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ delay: 2.2, duration: 0.4, ease: 'backOut' }}
-        />
-
-        {/* Accent lines suggesting "life" */}
-        <motion.div
-          className="absolute right-2 bottom-28 flex flex-col gap-1.5"
-          initial={{ opacity: 0, x: 10 }}
-          animate={{ opacity: 0.5, x: 0 }}
-          transition={{ delay: 2.4, duration: 0.5 }}
+          className="absolute top-1.5 right-2 px-2 py-0.5 rounded text-[10px] font-mono font-medium"
+          style={{
+            color: 'rgba(255, 255, 255, 0.7)',
+            background: 'rgba(255, 255, 255, 0.1)',
+          }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.6, duration: 0.4 }}
         >
-          <div className="h-1 w-12 rounded-full" style={{ background: 'var(--text-muted)' }} />
-          <div className="h-1 w-8 rounded-full" style={{ background: 'var(--text-muted)' }} />
+          Live Product
         </motion.div>
       </motion.div>
 
-      {/* Label badge */}
+      {/* ── Accent dot ── */}
       <motion.div
-        className="absolute top-3 left-3 px-2.5 py-1 rounded-md text-[10px] font-mono font-medium tracking-wider uppercase"
-        style={{
-          background: 'var(--bg-card)',
-          color: 'var(--accent-cyan)',
-          border: '1px solid var(--stroke-grid)',
-        }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.6, duration: 0.5 }}
-      >
-        {label}
-      </motion.div>
+        className="absolute -top-2 -right-2 w-4.5 h-4.5 rounded-full blur-[1px]"
+        style={{ background: 'var(--accent-lime)' }}
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 0.8, scale: 1 }}
+        transition={{ delay: 1.6, duration: 0.4 }}
+      />
     </div>
   );
 }
