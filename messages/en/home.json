@@ -1,15 +1,35 @@
 {
   "hero": {
-    "headline": "Software Engineer &\nExperience Architect",
-    "subheadline": "I design with the precision of an architect and bring ideas to life with polished interfaces. Specialized in system design, UX, and scalable architectures.",
+    "badge": "Google Cloud Associate Cloud Engineer",
+    "headline": {
+      "line1": "Full-Stack Developer",
+      "line2": "& Cloud",
+      "line3": "Engineer"
+    },
+    "subheadline": "I build digital products from frontend to cloud — with clean architecture, real performance impact, and a focus on what users actually need.",
     "cta": {
       "viewProjects": "View projects",
       "getInTouch": "Let's talk"
     },
+    "stats": {
+      "experience": {
+        "value": "3+",
+        "label": "Years Building"
+      },
+      "certification": {
+        "value": "GCP",
+        "label": "Certified"
+      },
+      "language": {
+        "value": "C2",
+        "label": "English"
+      }
+    },
     "visual": {
       "wireframeAlt": "Wireframe transforming into a finished interface",
       "label": "Blueprint → Product"
-    }
+    },
+    "scrollHint": "Scroll"
   },
   "featuredProjects": {
     "heading": "Featured Projects",
