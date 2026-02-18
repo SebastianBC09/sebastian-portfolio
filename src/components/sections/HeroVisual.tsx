@@ -17,15 +17,20 @@ export function HeroVisual({ label }: HeroVisualProps) {
       <div
         className="absolute inset-0 rounded-2xl overflow-hidden"
         style={{
-          border: '1px solid var(--stroke-grid)',
-          background: 'var(--bg-card)',
+          border: '1px solid var(--color-stroke-grid)',
+          background: 'var(--color-bg-card)',
         }}
       >
         {/* Inner blueprint grid */}
         <svg className="absolute inset-0 w-full h-full">
           <defs>
             <pattern id="hero-visual-grid" width="28" height="28" patternUnits="userSpaceOnUse">
-              <path d="M28 0H0V28" fill="none" stroke="var(--stroke-grid)" strokeWidth="0.4" />
+              <path
+                d="M28 0H0V28"
+                fill="none"
+                stroke="var(--color-stroke-grid)"
+                strokeWidth="0.4"
+              />
             </pattern>
           </defs>
           <rect width="100%" height="100%" fill="url(#hero-visual-grid)" />
@@ -43,8 +48,8 @@ export function HeroVisual({ label }: HeroVisualProps) {
             <div
               className="w-7 h-7 rounded"
               style={{
-                border: '1px solid var(--stroke-grid)',
-                background: 'var(--bg-card)',
+                border: '1px solid var(--color-stroke-grid)',
+                background: 'var(--color-bg-card)',
               }}
             />
             <div className="flex gap-1.5">
@@ -52,7 +57,7 @@ export function HeroVisual({ label }: HeroVisualProps) {
                 <div
                   key={i}
                   className="w-9 h-1.5 rounded-full"
-                  style={{ background: 'var(--stroke-grid)' }}
+                  style={{ background: 'var(--color-stroke-grid)' }}
                 />
               ))}
             </div>
@@ -62,15 +67,15 @@ export function HeroVisual({ label }: HeroVisualProps) {
           <div className="flex-1 flex flex-col gap-2 mt-3">
             <div
               className="h-2 w-3/4 rounded-full"
-              style={{ background: 'color-mix(in srgb, var(--text-muted) 20%, transparent)' }}
+              style={{ background: 'color-mix(in srgb, var(--color-text-muted) 20%, transparent)' }}
             />
             <div
               className="h-2 w-1/2 rounded-full"
-              style={{ background: 'color-mix(in srgb, var(--text-muted) 16%, transparent)' }}
+              style={{ background: 'color-mix(in srgb, var(--color-text-muted) 16%, transparent)' }}
             />
             <div
               className="h-1.5 w-3/5 rounded-full mt-1"
-              style={{ background: 'color-mix(in srgb, var(--text-muted) 12%, transparent)' }}
+              style={{ background: 'color-mix(in srgb, var(--color-text-muted) 12%, transparent)' }}
             />
           </div>
 
@@ -79,15 +84,15 @@ export function HeroVisual({ label }: HeroVisualProps) {
             <div
               className="flex-1 h-14 rounded-lg"
               style={{
-                border: '1px solid var(--stroke-grid)',
-                background: 'var(--bg-card)',
+                border: '1px solid var(--color-stroke-grid)',
+                background: 'var(--color-bg-card)',
               }}
             />
             <div
               className="flex-1 h-14 rounded-lg"
               style={{
-                border: '1px solid var(--stroke-grid)',
-                background: 'var(--bg-card)',
+                border: '1px solid var(--color-stroke-grid)',
+                background: 'var(--color-bg-card)',
               }}
             />
           </div>
@@ -97,9 +102,9 @@ export function HeroVisual({ label }: HeroVisualProps) {
         <motion.div
           className="absolute top-2 left-2.5 px-2 py-0.5 rounded text-[10px] font-mono font-medium"
           style={{
-            color: 'var(--text-muted)',
-            background: 'var(--bg-card)',
-            border: '1px solid var(--stroke-grid)',
+            color: 'var(--color-text-muted)',
+            background: 'var(--color-bg-card)',
+            border: '1px solid var(--color-stroke-grid)',
           }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -115,9 +120,10 @@ export function HeroVisual({ label }: HeroVisualProps) {
         style={{
           width: '68%',
           height: '52%',
-          background: 'linear-gradient(135deg, var(--accent-cyan), var(--accent-coral))',
+          background:
+            'linear-gradient(135deg, var(--color-accent-cyan), var(--color-accent-coral))',
           boxShadow: '0 20px 50px rgba(0, 0, 0, 0.3)',
-          border: '1px solid var(--stroke-grid)',
+          border: '1px solid var(--color-stroke-grid)',
         }}
         initial={{ opacity: 0, y: 30, scale: 0.94 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -182,7 +188,7 @@ export function HeroVisual({ label }: HeroVisualProps) {
       {/* ── Accent dot ── */}
       <motion.div
         className="absolute -top-2 -right-2 w-4.5 h-4.5 rounded-full blur-[1px]"
-        style={{ background: 'var(--accent-lime)' }}
+        style={{ background: 'var(--color-accent-lime)' }}
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 0.8, scale: 1 }}
         transition={{ delay: 1.6, duration: 0.4 }}

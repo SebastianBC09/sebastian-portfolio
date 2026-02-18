@@ -44,20 +44,20 @@ export function Hero() {
       <div className="max-w-6xl mx-auto px-6 pt-35 pb-20 md:pb-28 lg:pb-32 min-h-screen flex items-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full">
           {/* ── Left column — copy ── */}
-          <motion.div variants={{ stagger }} initial="hidden" animate="visible">
+          <motion.div variants={stagger} initial="hidden" animate="visible">
             {/* GCP Badge */}
             <motion.div variants={{ fadeUp }} className="mb-7">
               <span
                 className="inline-flex items-center gap-1.5 px-3 py-1.25 rounded-md text-xs font-mono font-semibold border"
                 style={{
-                  background: 'color-mix(in srgb, var(--accent-lime) 10%, transparent)',
-                  color: 'var(--accent-lime)',
-                  borderColor: 'color-mix(in srgb, var(--accent-lime) 20%, transparent)',
+                  background: 'color-mix(in srgb, var(--color-accent-lime) 10%, transparent)',
+                  color: 'var(--color-accent-lime)',
+                  borderColor: 'color-mix(in srgb, var(--color-accent-lime) 20%, transparent)',
                 }}
               >
                 <span
-                  className="w-1.5 h-1.5 rounded-full animate-[subtlePulse_2s_ease_infinite]"
-                  style={{ background: 'var(--accent-lime)' }}
+                  className="w-1.5 h-1.5 rounded-full animate-subtle-pulse"
+                  style={{ background: 'var(--color-accent-lime)' }}
                 />
                 {t('badge')}
               </span>
@@ -69,9 +69,9 @@ export function Hero() {
               className="font-display font-extrabold leading-[1.05] tracking-tight"
               style={{ fontSize: 'clamp(2.25rem, 5vw, 4.25rem)' }}
             >
-              <span className="text-(--text-primary)">{t('headline.line1')}</span>
+              <span className="text-text-primary">{t('headline.line1')}</span>
               <br />
-              <span className="text-(--text-primary)/40">{t('headline.line2')}</span>
+              <span className="text-text-primary/40">{t('headline.line2')}</span>
               <br />
               <span className="gradient-text">{t('headline.line3')}</span>
             </motion.h1>
@@ -79,7 +79,7 @@ export function Hero() {
             {/* Subheadline */}
             <motion.p
               variants={{ fadeUp }}
-              className="mt-6 text-[17px] leading-relaxed text-(--text-muted) max-w-120"
+              className="mt-6 text-[17px] leading-relaxed text-text-muted max-w-120"
             >
               {t('subheadline')}
             </motion.p>
@@ -108,11 +108,11 @@ export function Hero() {
                 <div key={key}>
                   <div
                     className="text-2xl font-display font-bold"
-                    style={{ color: 'var(--accent-cyan)' }}
+                    style={{ color: 'var(--color-accent-cyan)' }}
                   >
                     {t(`stats.${key}.value`)}
                   </div>
-                  <div className="text-[11px] mt-1 text-(--text-primary)/35 tracking-wide">
+                  <div className="text-[11px] mt-1 text-text-primary/35 tracking-wide">
                     {t(`stats.${key}.label`)}
                   </div>
                 </div>
@@ -120,7 +120,7 @@ export function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* ── Right column — BlueprintVisual ── */}
+          {/* ── Right column — HeroVisual ── */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -142,13 +142,13 @@ export function Hero() {
         animate={{ opacity: 0.4 }}
         transition={{ delay: 2, duration: 0.8 }}
       >
-        <span className="text-[10px] font-mono text-(--text-muted) tracking-[0.15em] uppercase">
+        <span className="text-[10px] font-mono text-text-muted tracking-[0.15em] uppercase">
           {t('scrollHint')}
         </span>
         <div
           className="w-px h-7"
           style={{
-            background: 'linear-gradient(to bottom, var(--text-muted), transparent)',
+            background: 'linear-gradient(to bottom, var(--color-text-muted), transparent)',
           }}
         />
       </motion.div>

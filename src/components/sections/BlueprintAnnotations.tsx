@@ -31,7 +31,7 @@ function Annotation({ text, x, y, delay }: AnnotationData) {
       style={{
         left: x,
         top: y,
-        color: 'var(--accent-cyan)',
+        color: 'var(--color-accent-cyan)',
         opacity: visible ? 0.2 : 0,
         transform: visible ? 'translateY(0)' : 'translateY(8px)',
         transition: 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)',
