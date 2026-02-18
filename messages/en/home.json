@@ -12,18 +12,9 @@
       "getInTouch": "Let's talk"
     },
     "stats": {
-      "experience": {
-        "value": "3+",
-        "label": "Years Building"
-      },
-      "certification": {
-        "value": "GCP",
-        "label": "Certified"
-      },
-      "language": {
-        "value": "C2",
-        "label": "English"
-      }
+      "experience": { "value": "3+", "label": "Years of experience" },
+      "certification": { "value": "GCP", "label": "Certified cloud engineer" },
+      "language": { "value": "EN/ES", "label": "Bilingual professional" }
     },
     "visual": {
       "wireframeAlt": "Wireframe transforming into a finished interface",
@@ -31,30 +22,32 @@
     },
     "scrollHint": "Scroll"
   },
+
   "featuredProjects": {
+    "label": "Featured Projects",
     "heading": "Featured Projects",
     "description": "Case studies where I combined design, architecture, and product thinking.",
     "viewAll": "View all projects",
     "cards": {
-      "magneto": {
-        "title": "Component Library Migration",
-        "summary": "Led a React/TypeScript component library migration with Storybook for Next.js applications, cutting CLS by 15% and boosting Core Web Vitals.",
-        "tags": "React, TypeScript, Storybook, Next.js"
-      },
       "agriculture": {
         "title": "Smart Agriculture IoT",
-        "summary": "Developed an Arduino-based automated irrigation system with scalable architecture for crop data collection and water optimization.",
-        "tags": "Arduino, IoT, Architecture, Python"
+        "hook": "Arduino sensors, a Java desktop app, and a real problem worth solving — a data-driven approach to water management that got noticed."
       },
-      "hrPlatform": {
-        "title": "HR Platform",
-        "summary": "Built responsive HR platform features with multilingual support, optimizing bundle size and improving load times by 15%.",
-        "tags": "React, TypeScript, i18n, Redux"
+      "swiftChallenge": {
+        "title": "Apple Swift Student Challenge 2026",
+        "hook": "Something is being built for Apple's most competitive student showcase. A deadline that doesn't move and a problem worth solving."
+      },
+      "mystery": {
+        "title": "???",
+        "hook": "Not ready to talk about this one yet."
       }
     }
   },
+
   "process": {
+    "label": "My Process",
     "heading": "My Process — Blueprint to Product",
+    "description": "A structured approach that balances architectural rigor with creative problem-solving.",
     "steps": {
       "blueprint": {
         "label": "Step 1",
@@ -73,9 +66,12 @@
       }
     }
   },
+
   "contactCta": {
-    "title": "Want to collaborate?",
-    "subtitle": "Let's talk about product, architecture, or engineering challenges.",
+    "location": "Bogotá, Colombia",
+    "title": "Let's build something",
+    "titleAccent": "extraordinary.",
+    "subtitle": "Whether you're looking for a full-stack engineer, want to talk architecture, or just want to connect — I'd love to hear from you.",
     "cta": {
       "email": "Send a message",
       "cv": "Download CV"
