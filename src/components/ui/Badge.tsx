@@ -6,11 +6,11 @@ export interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
 }
 
 const variantStyles: Record<string, string> = {
-  default: 'text-[var(--text-muted)] bg-[var(--bg-card)] border-[var(--stroke)]',
-  cyan: 'text-[var(--accent-cyan)] bg-[var(--accent-cyan)]/10 border-[var(--accent-cyan)]/20',
-  coral: 'text-[var(--accent-coral)] bg-[var(--accent-coral)]/10 border-[var(--accent-coral)]/20',
-  lime: 'text-[var(--accent-lime)] bg-[var(--accent-lime)]/10 border-[var(--accent-lime)]/20',
-  amber: 'text-[var(--accent-amber)] bg-[var(--accent-amber)]/10 border-[var(--accent-amber)]/20',
+  default: 'text-text-muted bg-bg-card border-stroke',
+  cyan: 'text-accent-cyan bg-accent-cyan/10 border-accent-cyan/20',
+  coral: 'text-accent-coral bg-accent-coral/10 border-accent-coral/20',
+  lime: 'text-accent-lime bg-accent-lime/10 border-accent-lime/20',
+  amber: 'text-accent-amber bg-accent-amber/10 border-accent-amber/20',
 };
 
 export function Badge({ variant = 'default', className, children, ...props }: BadgeProps) {

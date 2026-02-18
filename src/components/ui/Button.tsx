@@ -8,10 +8,10 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const variantStyles: Record<string, string> = {
   primary:
-    'bg-[var(--accent-coral)] text-white hover:opacity-90 shadow-[0_4px_20px_rgba(232,93,74,0.25)]',
+    'bg-accent-coral text-white hover:opacity-90 shadow-[0_4px_20px_color-mix(in_srgb,var(--color-accent-coral)_25%,transparent)]',
   secondary:
-    'border border-[var(--stroke)] text-[var(--text-primary)] hover:bg-[var(--bg-card-hover)] hover:border-[var(--stroke-active)]',
-  ghost: 'text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-card)]',
+    'border border-stroke text-text-primary hover:bg-bg-card-hover hover:border-stroke-active',
+  ghost: 'text-text-muted hover:text-text-primary hover:bg-bg-card',
 };
 
 const sizeStyles: Record<string, string> = {
