@@ -32,13 +32,13 @@ export function BlueprintGrid() {
       {/* Ambient glow — top right (cyan) */}
       <div
         className="absolute -top-30 -right-30 w-125 h-125 rounded-full opacity-[0.05] blur-[120px]"
-        style={{ background: 'var(--accent-cyan)' }}
+        style={{ background: 'var(--color-accent-cyan)' }}
       />
 
       {/* Ambient glow — bottom left (coral) */}
       <div
         className="absolute -bottom-20 -left-25 w-100 h-100 rounded-full opacity-[0.03] blur-[100px]"
-        style={{ background: 'var(--accent-coral)' }}
+        style={{ background: 'var(--color-accent-coral)' }}
       />
     </div>
   );

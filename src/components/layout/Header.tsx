@@ -41,11 +41,11 @@ export function Header() {
     <header
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-500',
-        isScrolled ? 'border-b border-(--accent-cyan)/8' : 'border-b border-transparent'
+        isScrolled ? 'border-b border-accent-cyan/8' : 'border-b border-transparent'
       )}
       style={{
         background: isScrolled
-          ? 'color-mix(in srgb, var(--bg-primary) 88%, transparent)'
+          ? 'color-mix(in srgb, var(--color-bg-primary) 88%, transparent)'
           : 'transparent',
         backdropFilter: isScrolled ? 'blur(20px) saturate(1.4)' : 'none',
       }}
@@ -62,14 +62,14 @@ export function Header() {
             className={cn(
               'w-10 h-10 rounded-[10px] flex items-center justify-center',
               'font-mono font-bold text-sm',
-              'bg-(--accent-cyan)/10 border-[1.5px] border-(--accent-cyan)/25',
-              'text-(--accent-cyan)',
+              'bg-accent-cyan/10 border-[1.5px] border-accent-cyan/25',
+              'text-accent-cyan',
               'group-hover:scale-105 transition-transform duration-300'
             )}
           >
             SB
           </div>
-          <span className="hidden sm:inline text-sm font-medium text-(--text-muted) group-hover:text-(--text-primary) transition-colors">
+          <span className="hidden sm:inline text-sm font-medium text-text-muted group-hover:text-text-primary transition-colors">
             bccloudsolutions.dev
           </span>
         </Link>
@@ -87,8 +87,8 @@ export function Header() {
                 className={cn(
                   'px-4 py-2 text-sm rounded-lg transition-colors',
                   isActive
-                    ? 'text-(--text-primary) bg-(--bg-card)'
-                    : 'text-(--text-muted) hover:text-(--text-primary) hover:bg-(--text-primary)/5'
+                    ? 'text-text-primary bg-bg-card'
+                    : 'text-text-muted hover:text-text-primary hover:bg-text-primary/5'
                 )}
               >
                 {t(`nav.${key}`)}
@@ -101,22 +101,20 @@ export function Header() {
             href="/contact"
             className={cn(
               'px-4 py-2 text-sm font-semibold rounded-lg transition-all',
-              'bg-(--accent-coral)/12 text-(--accent-coral)',
-              'border border-(--accent-coral)/25',
-              'hover:bg-(--accent-coral)/20 hover:border-(--accent-coral)/40'
+              'bg-accent-coral/12 text-accent-coral',
+              'border border-accent-coral/25',
+              'hover:bg-accent-coral/20 hover:border-accent-coral/40'
             )}
           >
             {t('nav.contact')}
           </Link>
 
           {/* Separator */}
-          <div className="w-px h-6 bg-(--stroke) ml-2 mr-2" />
+          <div className="w-px h-6 bg-stroke ml-2 mr-2" />
 
           {/* Language + Theme */}
           <LanguageSwitcher />
-          <div className="">
-            <ThemeToggle />
-          </div>
+          <ThemeToggle />
         </div>
 
         {/* ── Mobile toggle ── */}
@@ -125,7 +123,7 @@ export function Header() {
           <ThemeToggle />
           <button
             onClick={() => setIsMobileOpen((prev) => !prev)}
-            className="p-2 rounded-lg text-(--text-primary) hover:bg-(--bg-card) transition-colors"
+            className="p-2 rounded-lg text-text-primary hover:bg-bg-card transition-colors"
             aria-label={isMobileOpen ? t('actions.closeMenu') : t('actions.openMenu')}
           >
             {isMobileOpen ? (
@@ -140,9 +138,9 @@ export function Header() {
       {/* ── Mobile menu ── */}
       {isMobileOpen && (
         <div
-          className="md:hidden px-6 pb-6 space-y-1 border-b border-(--stroke-grid)"
+          className="md:hidden px-6 pb-6 space-y-1 border-b border-stroke-grid"
           style={{
-            background: 'color-mix(in srgb, var(--bg-primary) 95%, transparent)',
+            background: 'color-mix(in srgb, var(--color-bg-primary) 95%, transparent)',
             backdropFilter: 'blur(20px)',
           }}
         >
@@ -158,8 +156,8 @@ export function Header() {
                 className={cn(
                   'block px-4 py-3 rounded-lg text-sm transition-colors',
                   isActive
-                    ? 'text-(--text-primary) bg-(--bg-card)'
-                    : 'text-(--text-muted) hover:text-(--text-primary) hover:bg-(--text-primary)/5'
+                    ? 'text-text-primary bg-bg-card'
+                    : 'text-text-muted hover:text-text-primary hover:bg-text-primary/5'
                 )}
               >
                 {t(`nav.${key}`)}
@@ -172,8 +170,8 @@ export function Header() {
             onClick={() => setIsMobileOpen(false)}
             className={cn(
               'block px-4 py-3 rounded-lg text-sm font-semibold transition-all',
-              'bg-(--accent-coral)/12 text-(--accent-coral)',
-              'border border-(--accent-coral)/25'
+              'bg-accent-coral/12 text-accent-coral',
+              'border border-accent-coral/25'
             )}
           >
             {t('nav.contact')}
