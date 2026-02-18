@@ -1,60 +1,175 @@
 @import 'tailwindcss';
-@import '../styles/tokens.css';
 
-/* ─── Base ─── */
+/* ─────────────────────────────────────────────────────────
+  DARK MODE VARIANT
+  Wires Tailwind's dark: variant to next-themes' .dark class
+───────────────────────────────────────────────────────── */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ─────────────────────────────────────────────────────────
+  THEME VARIABLES
+  Defined with @theme so Tailwind generates real utility
+  classes (e.g. bg-bg-primary, text-accent-cyan, etc.)
+
+  Light mode values are set here as the default.
+  Dark mode overrides live in the .dark {} block below.
+
+  Tailwind's default spacing, radius, and easing scales are
+  intentionally left untouched to avoid cross-browser issues.
+
+  Namespace → Utilities generated:
+  --color-*    → bg-*, text-*, border-*, fill-*, ring-*, etc.
+  --font-*     → font-display, font-body, font-code
+  --animate-*  → animate-*
+───────────────────────────────────────────────────────── */
+@theme {
+  /* ─── Background Colors ─── */
+  --color-bg-primary: #f4f6fa;
+  --color-bg-secondary: #ffffff;
+  --color-bg-card: rgba(0, 0, 0, 0.03);
+  --color-bg-card-hover: rgba(0, 0, 0, 0.06);
+
+  /* ─── Text Colors ─── */
+  --color-text-primary: #0f1729;
+  --color-text-secondary: #3d5068;
+  --color-text-muted: #5a6b82;
+
+  /* ─── Stroke / Border Colors ─── */
+  --color-stroke: rgba(0, 0, 0, 0.08);
+  --color-stroke-active: rgba(0, 0, 0, 0.15);
+  --color-stroke-grid: rgba(0, 0, 0, 0.04);
+  --color-stroke-grid-strong: rgba(0, 0, 0, 0.08);
+
+  /* ─── Accent Colors ─── */
+  --color-accent-cyan: #0091b2;
+  --color-accent-coral: #d94b3f;
+  --color-accent-lime: #4a8c00;
+  --color-accent-amber: #b87a00;
+
+  /* ─── Animations
+     @keyframes for animate-* utilities live inside @theme  ─── */
+  --animate-fade-slide-in: fadeSlideIn 0.5s var(--ease-out) both;
+  --animate-subtle-pulse: subtlePulse 3s ease-in-out infinite;
+  --animate-gradient-shift: gradientShift 6s ease infinite;
+
+  @keyframes fadeSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes subtlePulse {
+    0%,
+    100% {
+      opacity: 0.6;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+
+/* ─── @theme inline for font vars
+  Required because next/font injects --font-outfit etc. at
+  runtime. Without 'inline', font-display resolves at the
+  wrong scope and falls back to sans-serif.  ─── */
+@theme inline {
+  --font-display: var(--font-outfit);
+  --font-body: var(--font-dm-sans);
+  --font-code: var(--font-jetbrains-mono);
+}
+/* ─────────────────────────────────────────────────────────
+  DARK MODE OVERRIDES
+  Reassigns the CSS variables compiled from @theme above.
+  next-themes sets class="dark" on <html>, which triggers
+  the @custom-variant defined at the top of this file.
+───────────────────────────────────────────────────────── */
+.dark {
+  /* ─── Background Colors ─── */
+  --color-bg-primary: #071430;
+  --color-bg-secondary: #0a1c3d;
+  --color-bg-card: rgba(255, 255, 255, 0.04);
+  --color-bg-card-hover: rgba(255, 255, 255, 0.08);
+
+  /* ─── Text Colors ─── */
+  --color-text-primary: #e6eef3;
+  --color-text-secondary: #d8e4f0;
+  --color-text-muted: #8b9db6;
+
+  /* ─── Stroke / Border Colors ─── */
+  --color-stroke: rgba(255, 255, 255, 0.08);
+  --color-stroke-active: rgba(255, 255, 255, 0.15);
+  --color-stroke-grid: rgba(130, 170, 255, 0.04);
+  --color-stroke-grid-strong: rgba(130, 170, 255, 0.08);
+
+  /* ─── Accent Colors ─── */
+  --color-accent-cyan: #00d4ff;
+  --color-accent-coral: #ff6b61;
+  --color-accent-lime: #b6ff4c;
+  --color-accent-amber: #ffb84d;
+}
+
+/* ─────────────────────────────────────────────────────────
+  BASE STYLES
+───────────────────────────────────────────────────────── */
 body {
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 ::selection {
-  background: color-mix(in srgb, var(--accent-cyan) 25%, transparent);
-  color: var(--text-primary);
+  background: color-mix(in srgb, var(--color-accent-cyan) 25%, transparent);
+  color: var(--color-text-primary);
 }
 
-/* ─── Hero Animations ─── */
-@keyframes fadeSlideIn {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* ─────────────────────────────────────────────────────────
+  COMPONENT UTILITIES
+  Custom classes that compose theme tokens. These are NOT
+  utility classes — they're semantic shortcuts for patterns
+  that repeat across sections.
+───────────────────────────────────────────────────────── */
+
+/* Blueprint grid background — applied to layout wrapper in layout.tsx */
+.blueprint-grid {
+  background-image:
+    linear-gradient(var(--color-stroke-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-stroke-grid) 1px, transparent 1px),
+    linear-gradient(var(--color-stroke-grid-strong) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-stroke-grid-strong) 1px, transparent 1px);
+  background-size:
+    24px 24px,
+    24px 24px,
+    96px 96px,
+    96px 96px;
 }
 
-@keyframes subtlePulse {
-  0%,
-  100% {
-    opacity: 0.6;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* ─── Gradient Text Utility ─── */
+/* Animated gradient text — used in Hero headline */
 .gradient-text {
   background-image: linear-gradient(
     135deg,
-    var(--accent-cyan) 0%,
-    var(--accent-lime) 50%,
-    var(--accent-coral) 100%
+    var(--color-accent-cyan) 0%,
+    var(--color-accent-lime) 50%,
+    var(--color-accent-coral) 100%
   );
   background-size: 200% 200%;
   -webkit-background-clip: text;
