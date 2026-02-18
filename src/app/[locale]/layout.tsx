@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, getTranslations } from 'next-intl/server';
+import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { Outfit, DM_Sans, JetBrains_Mono } from 'next/font/google';
 
 import { routing } from '@/i18n/routing';
@@ -30,7 +30,7 @@ const jetbrainsMono = JetBrains_Mono({
   display: 'swap',
 });
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
@@ -99,6 +99,8 @@ export default async function LocaleLayout({
     notFound();
   }
 
+  setRequestLocale(locale);
+
   const messages = await getMessages();
 
   return (
@@ -107,9 +109,12 @@ export default async function LocaleLayout({
       className={`${outfit.variable} ${dmSans.variable} ${jetbrainsMono.variable}`}
       suppressHydrationWarning
     >
-      <body className="min-h-screen bg-(--bg-primary) text-(--text-primary) font-body antialiased">
+      <body
+        className="min-h-screen bg-bg-primary text-text-primary font-body antialiased"
+        suppressHydrationWarning
+      >
         <ThemeProvider>
-          <NextIntlClientProvider messages={messages}>
+          <NextIntlClientProvider locale={locale} messages={messages}>
             <BlueprintGrid />
             <BlueprintAnnotations />
             <div className="relative z-10 flex min-h-screen flex-col">
