@@ -20,7 +20,7 @@ const fadeUp = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
+    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] as const },
   },
 };
 
@@ -29,7 +29,7 @@ const fadeLeft = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as const },
   },
 };
 
@@ -46,7 +46,7 @@ export function Hero() {
           {/* ── Left column — copy ── */}
           <motion.div variants={stagger} initial="hidden" animate="visible">
             {/* GCP Badge */}
-            <motion.div variants={{ fadeUp }} className="mb-7">
+            <motion.div variants={fadeUp} className="mb-7">
               <span
                 className="inline-flex items-center gap-1.5 px-3 py-1.25 rounded-md text-xs font-mono font-semibold border"
                 style={{
@@ -65,7 +65,7 @@ export function Hero() {
 
             {/* Headline */}
             <motion.h1
-              variants={{ fadeLeft }}
+              variants={fadeLeft}
               className="font-display font-extrabold leading-[1.05] tracking-tight"
               style={{ fontSize: 'clamp(2.25rem, 5vw, 4.25rem)' }}
             >
@@ -78,14 +78,14 @@ export function Hero() {
 
             {/* Subheadline */}
             <motion.p
-              variants={{ fadeUp }}
+              variants={fadeUp}
               className="mt-6 text-[17px] leading-relaxed text-text-muted max-w-120"
             >
               {t('subheadline')}
             </motion.p>
 
             {/* CTA Buttons */}
-            <motion.div variants={{ fadeUp }} className="mt-9 flex flex-wrap gap-4">
+            <motion.div variants={fadeUp} className="mt-9 flex flex-wrap gap-4">
               <Link href="#projects">
                 <Button variant="primary" size="lg">
                   {t('cta.viewProjects')}
@@ -103,7 +103,7 @@ export function Hero() {
             </motion.div>
 
             {/* Quick Stats */}
-            <motion.div variants={{ fadeUp }} className="mt-12 flex gap-9">
+            <motion.div variants={fadeUp} className="mt-12 flex gap-9">
               {STAT_KEYS.map((key) => (
                 <div key={key}>
                   <div
