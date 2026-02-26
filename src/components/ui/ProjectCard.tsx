@@ -4,16 +4,17 @@ import { useState } from 'react';
 import { ExternalLink, Lock } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Reveal } from '@/components/ui/Reveal';
+import { Card } from '@/components/ui/Card';
 
 export interface ProjectCardData {
   id: string;
-  /** Origin/domain label — replaces OG "company" (e.g. "UNINPAHU University", "Apple Challenge") */
+  /** Origin/domain label — e.g. "UNINPAHU University", "Magneto Global" */
   context: string;
   title: string;
   /** 1–2 punchy sentences — intriguing, not exhaustive */
   description: string;
   tags: string[];
-  /** Short outcome labels — OG metrics shape, 3 max */
+  /** Short outcome labels — metrics shape, 3 max */
   highlights: string[];
   accent: string;
   accentBg: string;
@@ -40,16 +41,17 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         onClick={() => !isLocked && project.href && (window.location.href = project.href)}
         className={cn(
           'relative rounded-2xl overflow-hidden transition-all duration-500 group h-full',
+          'border',
           isLocked ? 'cursor-default' : 'cursor-pointer'
         )}
         style={{
           background: hovered ? project.accentBg : 'var(--color-bg-card)',
-          border: `1px solid ${hovered ? project.accent + '30' : 'var(--color-stroke-grid)'}`,
+          borderColor: hovered ? project.accent + '30' : 'var(--color-stroke-grid)',
           transform: hovered ? 'translateY(-4px)' : 'translateY(0)',
           boxShadow: hovered ? `0 20px 60px ${project.accent}15` : 'none',
         }}
       >
-        {/* Locked overlay */}
+        {/* ── Locked overlay ── */}
         {isLocked && (
           <div
             className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-3 rounded-2xl"
@@ -66,72 +68,55 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           </div>
         )}
 
-        <div className={cn('p-6 sm:p-8', isLocked && 'select-none blur-[2px]')}>
-          {/* Top row — context label + ExternalLink */}
-          <div className="flex items-start justify-between mb-4">
-            <div className="flex flex-col gap-2">
-              {/* Context — same role as OG "company" */}
-              <span
-                className="text-xs font-semibold tracking-wider uppercase"
-                style={{ color: project.accent, fontFamily: "'JetBrains Mono', monospace" }}
-              >
-                {project.context}
-              </span>
-
-              {/* In-progress badge — matches SectionHeading label style */}
-              {isInProgress && (
-                <span
-                  className="inline-flex items-center gap-1.5 self-start text-xs font-semibold tracking-[0.2em] uppercase px-3 py-1 rounded-full border"
-                  style={{
-                    color: project.accent,
-                    background: `color-mix(in srgb, ${project.accent} 8%, transparent)`,
-                    borderColor: `color-mix(in srgb, ${project.accent} 15%, transparent)`,
-                    fontFamily: "'JetBrains Mono', monospace",
-                  }}
-                >
+        <div
+          className={cn('p-6 sm:p-8 flex flex-col h-full', isLocked && 'select-none blur-[2px]')}
+        >
+          {/* ── Card.Header — context label + optional in-progress badge + external link ── */}
+          <Card.Header
+            title={project.title}
+            subtitle={project.context}
+            subtitleColor={project.accent}
+            trailing={
+              <div className="flex items-center gap-2 shrink-0">
+                {isInProgress && (
                   <span
-                    className="w-1.5 h-1.5 rounded-full animate-subtle-pulse"
-                    style={{ background: project.accent }}
-                  />
-                  In progress
-                </span>
-              )}
-            </div>
-
-            {/* ExternalLink — fades in from bottom-left on hover, exact OG behavior */}
-            {!isLocked && (
-              <div
-                className="transition-all duration-300 shrink-0"
-                style={{
-                  opacity: hovered ? 1 : 0.2,
-                  transform: hovered ? 'translate(0, 0)' : 'translate(-4px, 4px)',
-                  color: project.accent,
-                }}
-              >
-                <ExternalLink size={18} />
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold tracking-[0.2em] uppercase px-3 py-1 rounded-full border"
+                    style={{
+                      color: project.accent,
+                      background: `color-mix(in srgb, ${project.accent} 8%, transparent)`,
+                      borderColor: `color-mix(in srgb, ${project.accent} 15%, transparent)`,
+                      fontFamily: "'JetBrains Mono', monospace",
+                    }}
+                  >
+                    <span
+                      className="w-1.5 h-1.5 rounded-full animate-subtle-pulse"
+                      style={{ background: project.accent }}
+                    />
+                    In progress
+                  </span>
+                )}
+                {!isLocked && (
+                  <div
+                    className="transition-all duration-300"
+                    style={{
+                      opacity: hovered ? 1 : 0.2,
+                      transform: hovered ? 'translate(0, 0)' : 'translate(-4px, 4px)',
+                      color: project.accent,
+                    }}
+                  >
+                    <ExternalLink size={18} />
+                  </div>
+                )}
               </div>
-            )}
-          </div>
+            }
+          />
 
-          {/* Title */}
-          <h3
-            className="text-xl font-bold mb-3 leading-snug"
-            style={{ color: 'var(--color-text-primary)', fontFamily: "'Outfit', sans-serif" }}
-          >
-            {project.title}
-          </h3>
+          {/* ── Card.Body — hook description ── */}
+          <Card.Body className="mb-6">{project.description}</Card.Body>
 
-          {/* Hook */}
-          <p
-            className="text-sm leading-relaxed mb-6"
-            style={{ color: 'var(--color-text-muted)', fontFamily: "'DM Sans', sans-serif" }}
-          >
-            {project.description}
-          </p>
-
-          {/* Tags */}
+          {/* ── Tags ── */}
           {project.tags.length > 0 && (
-            <div className="flex flex-wrap gap-2 mb-6">
+            <Card.Footer className="mb-6 mt-0">
               {project.tags.map((tag) => (
                 <span
                   key={tag}
@@ -146,12 +131,12 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                   {tag}
                 </span>
               ))}
-            </div>
+            </Card.Footer>
           )}
 
-          {/* Highlights — exact OG metrics style */}
+          {/* ── Highlights — metric outcomes ── */}
           {project.highlights.length > 0 && (
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3 mt-auto">
               {project.highlights.map((highlight, i) => (
                 <span
                   key={i}
