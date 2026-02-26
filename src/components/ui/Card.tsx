@@ -22,8 +22,8 @@ const CardRoot = forwardRef<HTMLDivElement, CardProps>(
       <div
         ref={ref}
         className={cn(
-          'relative bg-(--bg-card) border border-(--stroke) rounded-2xl transition-all duration-300 overflow-hidden',
-          hover && 'hover:bg-(--bg-card-hover) hover:border-(--stroke-active) hover:-translate-y-1',
+          'relative bg-bg-card border border-stroke rounded-2xl transition-all duration-300 overflow-hidden',
+          hover && 'hover:bg-bg-card-hover hover:border-stroke-active hover:-translate-y-1',
           paddingStyles[padding],
           className
         )}
@@ -71,7 +71,7 @@ function CardThumbnail({ children, className, ...props }: CardThumbnailProps) {
     <div
       className={cn(
         'h-40 rounded-lg mb-4 flex items-center justify-center',
-        'bg-(--bg-primary)/50 border border-(--stroke)',
+        'bg-bg-primary/50 border border-stroke',
         className
       )}
       {...props}
@@ -104,19 +104,17 @@ function CardHeader({
   return (
     <div className={cn('flex items-start justify-between gap-3 mb-4', className)} {...props}>
       <div className="flex flex-col gap-1 min-w-0">
-        <h3 className="font-display font-bold text-base text-(--text-primary) leading-snug">
-          {title}
-        </h3>
+        <h3 className="font-display font-bold text-base text-text-primary leading-snug">{title}</h3>
         {subtitle && (
           <span
             className="text-sm font-medium"
-            style={{ color: subtitleColor ?? 'var(--accent-cyan)' }}
+            style={{ color: subtitleColor ?? 'var(--color-accent-cyan)' }}
           >
             {subtitle}
           </span>
         )}
       </div>
-      {trailing && <div className="shrink-0">{trailing}</div>}
+      {trailing && <div className="flex-shrink-0">{trailing}</div>}
     </div>
   );
 }
@@ -130,10 +128,7 @@ interface CardBodyProps extends HTMLAttributes<HTMLDivElement> {
 
 function CardBody({ children, className, ...props }: CardBodyProps) {
   return (
-    <div
-      className={cn('flex-1 text-sm text-(--text-secondary) leading-relaxed', className)}
-      {...props}
-    >
+    <div className={cn('flex-1 text-sm text-text-secondary leading-relaxed', className)} {...props}>
       {children}
     </div>
   );
@@ -151,7 +146,7 @@ interface CardBulletListProps {
 
 function CardBulletList({
   items,
-  accentColor = 'var(--accent-cyan)',
+  accentColor = 'var(--color-accent-cyan)',
   className,
 }: CardBulletListProps) {
   return (
@@ -159,11 +154,11 @@ function CardBulletList({
       {items.map((item, i) => (
         <li key={i} className="flex items-start gap-3">
           <div
-            className="w-1 h-1 rounded-full mt-2 shrink-0"
+            className="w-1 h-1 rounded-full mt-2 flex-shrink-0"
             style={{ background: `color-mix(in srgb, ${accentColor} 60%, transparent)` }}
             aria-hidden="true"
           />
-          <span className="text-sm text-(--text-muted) leading-relaxed">{item}</span>
+          <span className="text-sm text-text-muted leading-relaxed">{item}</span>
         </li>
       ))}
     </ul>
@@ -184,7 +179,7 @@ function CardFooter({ children, divided = false, className, ...props }: CardFoot
     <div
       className={cn(
         'flex flex-wrap gap-2 mt-4',
-        divided && 'pt-4 border-t border-(--stroke)',
+        divided && 'pt-4 border-t border-stroke',
         className
       )}
       {...props}
