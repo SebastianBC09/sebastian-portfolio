@@ -2,11 +2,7 @@
 
 import { motion } from 'framer-motion';
 
-interface HeroVisualProps {
-  label: string;
-}
-
-export function HeroVisual({ label }: HeroVisualProps) {
+export function HeroVisual() {
   return (
     <div
       className="relative w-full max-w-105 mx-auto"
@@ -21,7 +17,7 @@ export function HeroVisual({ label }: HeroVisualProps) {
           background: 'var(--color-bg-card)',
         }}
       >
-        {/* Inner blueprint grid */}
+        {/* Blueprint grid */}
         <svg className="absolute inset-0 w-full h-full">
           <defs>
             <pattern id="hero-visual-grid" width="28" height="28" patternUnits="userSpaceOnUse">
@@ -36,12 +32,13 @@ export function HeroVisual({ label }: HeroVisualProps) {
           <rect width="100%" height="100%" fill="url(#hero-visual-grid)" />
         </svg>
 
-        {/* Wireframe content — fades out */}
+        {/* Wireframe content — fades out
+            delay 1.2→0.6, duration 1.5→0.8 — done at 1.4s instead of 2.7s */}
         <motion.div
           className="relative p-5 h-full flex flex-col gap-2.5"
           initial={{ opacity: 1 }}
           animate={{ opacity: 0.3 }}
-          transition={{ delay: 1.2, duration: 1.5, ease: 'easeInOut' }}
+          transition={{ delay: 0.6, duration: 0.8, ease: 'easeInOut' }}
         >
           {/* Wireframe header */}
           <div className="flex justify-between items-center">
@@ -98,7 +95,8 @@ export function HeroVisual({ label }: HeroVisualProps) {
           </div>
         </motion.div>
 
-        {/* Blueprint label */}
+        {/* Blueprint label
+            delay 0.4→0.2 */}
         <motion.div
           className="absolute top-2 left-2.5 px-2 py-0.5 rounded text-[10px] font-mono font-medium"
           style={{
@@ -108,13 +106,15 @@ export function HeroVisual({ label }: HeroVisualProps) {
           }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.4, duration: 0.5 }}
+          transition={{ delay: 0.2, duration: 0.4 }}
         >
           Blueprint
         </motion.div>
       </div>
 
-      {/* ── Finished product overlay ── */}
+      {/* ── Finished product overlay
+          delay 0.8→0.4, duration 0.65→0.5
+          Fully rendered at 0.9s instead of 1.45s ── */}
       <motion.div
         className="absolute -bottom-3 -right-3 rounded-xl overflow-hidden"
         style={{
@@ -125,11 +125,11 @@ export function HeroVisual({ label }: HeroVisualProps) {
           boxShadow: '0 20px 50px rgba(0, 0, 0, 0.3)',
           border: '1px solid var(--color-stroke-grid)',
         }}
-        initial={{ opacity: 0, y: 30, scale: 0.94 }}
+        initial={{ opacity: 0, y: 20, scale: 0.96 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{
-          delay: 0.8,
-          duration: 0.65,
+          delay: 0.4,
+          duration: 0.5,
           ease: [0.16, 1, 0.3, 1],
         }}
       >
@@ -170,7 +170,8 @@ export function HeroVisual({ label }: HeroVisualProps) {
           </div>
         </div>
 
-        {/* Live product label */}
+        {/* Live Product label
+            delay 1.6→0.85 — appears right as overlay finishes */}
         <motion.div
           className="absolute top-1.5 right-2 px-2 py-0.5 rounded text-[10px] font-mono font-medium"
           style={{
@@ -179,19 +180,20 @@ export function HeroVisual({ label }: HeroVisualProps) {
           }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.6, duration: 0.4 }}
+          transition={{ delay: 0.85, duration: 0.35 }}
         >
           Live Product
         </motion.div>
       </motion.div>
 
-      {/* ── Accent dot ── */}
+      {/* ── Accent dot
+          delay 1.6→0.9, scale start 0→0.6 for less jarring pop ── */}
       <motion.div
         className="absolute -top-2 -right-2 w-4.5 h-4.5 rounded-full blur-[1px]"
         style={{ background: 'var(--color-accent-lime)' }}
-        initial={{ opacity: 0, scale: 0 }}
+        initial={{ opacity: 0, scale: 0.6 }}
         animate={{ opacity: 0.8, scale: 1 }}
-        transition={{ delay: 1.6, duration: 0.4 }}
+        transition={{ delay: 0.9, duration: 0.35 }}
       />
     </div>
   );
