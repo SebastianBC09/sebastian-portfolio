@@ -6,34 +6,32 @@ import { Button } from '@/components/ui/Button';
 import { Link } from '@/i18n/navigation';
 import { HeroVisual } from './HeroVisual';
 
-/* ── Animation variants (hoisted, static) ── */
 const stagger = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.12, delayChildren: 0.15 },
+    transition: { staggerChildren: 0.08, delayChildren: 0.1 },
   },
 };
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 16 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] as const },
+    transition: { duration: 0.45, ease: [0.16, 1, 0.3, 1] as const },
   },
 };
 
 const fadeLeft = {
-  hidden: { opacity: 0, x: -24 },
+  hidden: { opacity: 0, x: -16 },
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as const },
+    transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] as const },
   },
 };
 
-/* ── Quick stats keys ── */
 const STAT_KEYS = ['experience', 'certification', 'language'] as const;
 
 export function Hero() {
@@ -94,7 +92,6 @@ export function Hero() {
                   </span>
                 </Button>
               </Link>
-
               <Link href="/contact">
                 <Button variant="secondary" size="lg">
                   {t('cta.getInTouch')}
@@ -125,12 +122,12 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
-              duration: 0.8,
-              delay: 0.5,
+              duration: 0.55,
+              delay: 0.25,
               ease: [0.16, 1, 0.3, 1],
             }}
           >
-            <HeroVisual label={t('visual.label')} />
+            <HeroVisual />
           </motion.div>
         </div>
       </div>
@@ -140,7 +137,10 @@ export function Hero() {
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.4 }}
-        transition={{ delay: 2, duration: 0.8 }}
+        transition={{
+          delay: 1.2,
+          duration: 0.5,
+        }}
       >
         <span className="text-[10px] font-mono text-text-muted tracking-[0.15em] uppercase">
           {t('scrollHint')}
