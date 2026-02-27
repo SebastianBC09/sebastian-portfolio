@@ -6,40 +6,25 @@ import { Compass, Layers, Rocket } from 'lucide-react';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 
 const STEPS = [
-  {
-    key: 'blueprint',
-    icon: Compass,
-    accent: 'var(--color-accent-cyan)',
-    stepNum: '01',
-  },
-  {
-    key: 'prototype',
-    icon: Layers,
-    accent: 'var(--color-accent-amber)',
-    stepNum: '02',
-  },
-  {
-    key: 'ship',
-    icon: Rocket,
-    accent: 'var(--color-accent-coral)',
-    stepNum: '03',
-  },
+  { key: 'blueprint', icon: Compass, accent: 'var(--color-accent-cyan)', stepNum: '01' },
+  { key: 'prototype', icon: Layers, accent: 'var(--color-accent-amber)', stepNum: '02' },
+  { key: 'ship', icon: Rocket, accent: 'var(--color-accent-coral)', stepNum: '03' },
 ] as const;
 
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.18 },
+    transition: { staggerChildren: 0.1 },
   },
 };
 
 const stepVariants = {
-  hidden: { opacity: 0, y: 24 },
+  hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] as const },
+    transition: { duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] as const },
   },
 };
 
@@ -74,7 +59,9 @@ export function ProcessSection() {
               key={key}
               variants={stepVariants}
               whileHover={{ y: -6 }}
-              transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+              transition={{
+                y: { type: 'spring', stiffness: 300, damping: 20 },
+              }}
               className="group relative p-8 rounded-2xl transition-colors duration-300 h-full"
               style={{
                 background: 'var(--color-bg-card)',
@@ -90,7 +77,7 @@ export function ProcessSection() {
                 aria-hidden="true"
               />
 
-              {/* Ghost step number — visual depth */}
+              {/* Ghost step number */}
               <div
                 className="text-7xl font-black absolute top-4 right-5 select-none font-display leading-none"
                 style={{ color: accent, opacity: 0.055 }}
