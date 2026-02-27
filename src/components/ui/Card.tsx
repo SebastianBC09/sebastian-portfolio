@@ -114,7 +114,7 @@ function CardHeader({
           </span>
         )}
       </div>
-      {trailing && <div className="flex-shrink-0">{trailing}</div>}
+      {trailing && <div className="shrink-0">{trailing}</div>}
     </div>
   );
 }
@@ -154,7 +154,7 @@ function CardBulletList({
       {items.map((item, i) => (
         <li key={i} className="flex items-start gap-3">
           <div
-            className="w-1 h-1 rounded-full mt-2 flex-shrink-0"
+            className="w-1 h-1 rounded-full mt-2 shrink-0"
             style={{ background: `color-mix(in srgb, ${accentColor} 60%, transparent)` }}
             aria-hidden="true"
           />
