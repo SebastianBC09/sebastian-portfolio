@@ -11,7 +11,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE: ghcr.io/${{ github.repository_owner }}/portfolio
+  IMAGE: ghcr.io/sebastianbc09/portfolio
   APP_DIR: /var/www/bccloudsolutions.dev
 
 jobs:
@@ -68,7 +68,7 @@ jobs:
 
             # Authenticate and pull the pre-built image (no build on Droplet)
             echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-            docker pull ghcr.io/${{ github.repository_owner }}/portfolio:latest
+            docker pull ghcr.io/sebastianbc09/portfolio:latest
 
             # Restart container with new image
             cd ${{ env.APP_DIR }}
