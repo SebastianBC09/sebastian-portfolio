@@ -1,35 +1,76 @@
 {
-  "hero": {
-    "headline": "Skills & Expertise",
-    "subheadline": "Technologies, tools, and practices I use to build scalable, performant software."
+  "meta": {
+    "title": "Skills & Stack",
+    "description": "A grounded view of the tools I reach for — not a logo parade, but a map of real decisions made in real codebases."
   },
+
+  "bridge": {
+    "headline": {
+      "line1": "The tools",
+      "line2": "I think with."
+    },
+    "description": "A grounded view of what I reach for and where it's been deployed — not a logo parade, but a map of real decisions made in real codebases."
+  },
+
+  "certification": {
+    "label": "Certification",
+    "sectionTitle": "Issued by Google.",
+    "eyebrow": "Google Cloud · Associate Cloud Engineer",
+    "title": "Issued by Google. Applied in production.",
+    "description": "Validated through hands-on work across Compute Engine, Cloud Storage, IAM policies, and CI/CD pipelines running on GCP."
+  },
+
+  "grid": {
+    "label": "Full Stack Breakdown",
+    "title": "Every layer, mapped out.",
+    "description": "Select a category. Skills are grouped from exploratory to battle-tested.",
+    "tablistLabel": "Technology categories",
+    "technologiesLabel": "technologies",
+    "foundations": {
+      "label": "// foundations",
+      "description": "The medium, not the tools — present in every line of work"
+    }
+  },
+
+  "tiers": {
+    "familiar": { "label": "Familiar" },
+    "proficient": { "label": "Proficient" },
+    "production": { "label": "Production" }
+  },
+
   "categories": {
     "frontend": {
-      "title": "Frontend",
-      "description": "Building polished, accessible, and performant user interfaces."
+      "label": "Frontend",
+      "annotation": "Where precision meets perception — the layer users actually feel."
     },
     "backend": {
-      "title": "Backend",
-      "description": "Designing APIs, services, and data layers that scale."
+      "label": "Backend",
+      "annotation": "Mostly self-taught beyond the basics. Enough to ship real services and know when to stop and ask."
     },
     "cloud": {
-      "title": "Cloud & DevOps",
-      "description": "Infrastructure, deployment pipelines, and cloud architecture."
+      "label": "Cloud & DevOps",
+      "annotation": "Certified on GCP, deployed on AWS. I treat infrastructure like code — version it, document it, don't improvise it."
     },
     "tools": {
-      "title": "Tools & Practices",
-      "description": "Version control, testing, documentation, and development workflow."
+      "label": "Tools & Practices",
+      "annotation": "The habits that make work trustworthy. Not glamorous, but the difference between a codebase you inherit and one you dread."
     }
   },
-  "certifications": {
-    "heading": "Certifications",
-    "gcp": {
-      "title": "Google Cloud Associate Cloud Engineer",
-      "issuer": "Google Cloud"
+
+  "character": {
+    "label": "Character",
+    "title": "How I actually show up.",
+    "description": "Not a list of soft skills. A few honest observations about how I think, work, and relate to people — the kind of things you'd only know after a month working together.",
+    "statements": {
+      "clarity": "Complex problems don't stress me. Unclear problems do — so I make them clear first.",
+      "directions": "I think in multiple directions before I commit to one. It takes a moment. The moment is worth it.",
+      "tangents": "I digress. I explore tangents. I come back with something the straight line would have missed.",
+      "slowDown": "I'd rather slow down for clarity upfront than move fast toward the wrong thing.",
+      "overengineering": "Over-engineering is its own kind of dishonesty — it signals complexity where there isn't any.",
+      "feedback": "Feedback on my work isn't uncomfortable. It's the fastest way I know to get better.",
+      "curious": "I get genuinely curious about the person behind the requirements, not just the requirements.",
+      "understand": "I don't just ship code. I make sure the person next to me understands why it works the way it does.",
+      "calm": "I stay calm when things get intense. Not because I'm indifferent, but because someone has to."
     }
-  },
-  "metadata": {
-    "title": "Skills — Sebastian Ballen",
-    "description": "Explore Sebastian Ballen's technical skills across frontend, backend, cloud, and DevOps — including React, TypeScript, Node.js, GCP, AWS, and Docker."
   }
 }
