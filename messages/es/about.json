@@ -1,44 +1,138 @@
 {
-  "hero": {
-    "headline": "Sobre Mí",
-    "introduction": "Soy Sebastian Ballen — Desarrollador de Software Full-Stack e Ingeniero Asociado en Google Cloud, basado en Bogotá, Colombia. Construyo experiencias digitales con la precisión de un arquitecto y la creatividad de un diseñador."
+  "bridge": {
+    "headline1": "Ya viste lo que construyo.",
+    "headline2": "Así llegué hasta aquí.",
+    "description": "Dos caminos paralelos — profesional y académico — corriendo al mismo tiempo."
   },
-  "journey": {
-    "heading": "Mi Trayectoria",
-    "sections": {
-      "origin": {
-        "title": "De la Curiosidad al Código",
-        "description": "Mi camino hacia la ingeniería de software comenzó con la fascinación por cómo funcionan los productos digitales. Estudiar Tecnología Computacional en Lake Superior College en Minnesota me dio la base técnica, mientras que la experiencia multicultural moldeó mi forma de pensar sobre construir productos para audiencias diversas."
+  "timeline": {
+    "label": "Mi Trayectoria",
+    "heading": "Dos caminos, un ingeniero",
+    "tracks": {
+      "professional": "Profesional",
+      "academic": "Académico"
+    },
+    "entries": {
+      "fasterSolutions": {
+        "role": "Pasante de Desarrollo de Software",
+        "org": "Faster Solutions — Duluth, MN",
+        "period": "Jun 2019 — Ago 2019",
+        "description": "La distancia entre saber programar y escribir código que llega a producción es más grande de lo que cualquier aula sugiere. Este verano la cerró."
       },
-      "growth": {
-        "title": "Construyendo a Escala",
-        "description": "En Magneto Global, pasé de especialista frontend a ingeniero full-stack — liderando migraciones de librerías de componentes, construyendo servicios backend en AWS y resolviendo bugs críticos que redujeron errores del sistema en un 95%. Cada desafío me enseñó que el gran software es tanto sobre arquitectura y proceso como sobre código."
+      "magneto": {
+        "role": "Desarrollador Full-Stack",
+        "org": "Magneto Global",
+        "period": "Nov 2022 — Ago 2024",
+        "description": "Casi dos años en la plataforma de RR.HH. líder en Colombia — tráfico real, equipos reales, decisiones reales. Donde las buenas prácticas dejaron de ser teoría y se convirtieron en supervivencia."
       },
-      "present": {
-        "title": "Ingeniería con Propósito",
-        "description": "Hoy estoy cursando mi carrera de Ingeniería de Software mientras sigo construyendo. Mi enfoque está en sistemas escalables, arquitectura cloud y la intersección entre diseño e ingeniería. Creo que los mejores productos vienen de ingenieros que piensan como arquitectos y diseñan como artistas."
+      "cafeto": {
+        "role": "Desarrollador Web",
+        "org": "Cafeto Software — Cliente: Pros",
+        "period": "Nov 2024 — Feb 2026",
+        "description": "Me uní a una librería UI madura que impulsa productos SaaS para aerolíneas — el tipo de codebase que enseña más que cualquier proyecto desde cero. Refactorizando, migrando y aprendiendo cómo los buenos equipos gestionan la deuda técnica."
+      },
+      "arroyo": {
+        "role": "Desarrollador Frontend",
+        "org": "Arroyo Consulting",
+        "period": "Feb 2022 — Oct 2022",
+        "description": "Primer equipo real, primera presión real de fechas. Trabajé en TimeTracker — una plataforma interna de registro de horas — y descubrí que los requisitos claros son un lujo, no una garantía."
+      },
+      "platzi": {
+        "role": "Bootcamp Platzi Master",
+        "org": "Platzi",
+        "period": "Ene 2021 — Sep 2021",
+        "description": "Nueve meses yendo a fondo — React, Redux, GraphQL, y suficiente pensamiento arquitectónico para entender por qué importan las decisiones. El año que reformuló cómo abordo un problema."
+      },
+      "teinco": {
+        "role": "Técnico Profesional en Sistemas",
+        "org": "Teinco",
+        "period": "Feb 2022 — Sep 2023",
+        "description": "Base formal en sistemas y desarrollo de software — la capa académica que le da un lugar donde anclarse a la experiencia práctica."
+      },
+      "uninpahu": {
+        "role": "Ing. de Software — En curso",
+        "org": "Universidad UNINPAHU",
+        "period": "Feb 2024 — Presente",
+        "description": "Sexto semestre — la parte de la carrera donde la teoría empieza a conectar con todo lo que ya has enviado a producción. AgroTech, un sistema IoT agrícola, recibió reconocimiento universitario en el primer semestre."
+      },
+      "lakeSuperior": {
+        "role": "A.S. Tecnología en Computación",
+        "org": "Lake Superior College",
+        "period": "Ene 2017 — May 2019",
+        "description": "Dos años en Minnesota — estudiando en inglés, pensando en sistemas, aprendiendo a trabajar en espacios donde nadie se parecía a mí. La base sobre la que está construido todo lo demás."
       }
     }
   },
-  "values": {
-    "heading": "Cómo Trabajo",
+  "recognition": {
+    "label": "Reconocimientos",
+    "heading": "Más allá de la descripción del cargo",
     "items": {
-      "precision": {
-        "title": "Precisión",
-        "description": "Código limpio, arquitectura testeada y resultados medibles."
+      "smartAgriculture": {
+        "title": "Sistema Smart Agriculture",
+        "org": "Universidad UNINPAHU — Desarrollador Líder",
+        "description": "Prototipo de riego automatizado basado en Arduino usando sensores de humedad del suelo. Diseñé arquitectura escalable para recolección de datos agrícolas y optimización del uso del agua. Reconocimiento universitario, primer semestre 2024."
       },
-      "curiosity": {
-        "title": "Curiosidad",
-        "description": "Aprendizaje continuo y experimentación con nuevas herramientas y patrones."
-      },
-      "clarity": {
-        "title": "Claridad",
-        "description": "Documentación, compartir conocimiento y hacer lo complejo comprensible."
+      "gcpCert": {
+        "title": "Google Cloud Associate Cloud Engineer",
+        "org": "Google Cloud — Certificado",
+        "description": "Certificado en infraestructura cloud, cómputo, almacenamiento e IAM en Google Cloud Platform. Experiencia práctica con Compute Engine, Cloud Storage y gestión de identidades."
       }
     }
+  },
+  "howIWork": {
+    "label": "Cómo Trabajo",
+    "heading": "Proceso, no solo ejecución",
+    "terminal": {
+      "approach1": "→ Primero los requisitos. Funcionales y no funcionales — ambos importan.",
+      "approach2": "  Entender el dominio del negocio antes que el stack tecnológico.",
+      "methodology1": "→ Scrum por defecto. Planning, daily, review, retro.",
+      "methodology2": "  Kanban cuando el trabajo no cabe en sprints.",
+      "tooling1": "→ Aumentado con IA, no dependiente de ella. Copilot y LLMs aceleran —",
+      "tooling2": "  pero las decisiones de arquitectura siguen siendo humanas.",
+      "collab1": "→ El backlog es una conversación. Cerca del producto, cerca del equipo.",
+      "collab2": "  La ambigüedad es un problema a resolver, no a entregar."
+    },
+    "codeBlock": {
+      "comment1": "// Conoce el dominio",
+      "types": "\"reglas, restricciones, casos borde primero\"",
+      "comment2": "// Diseña el contrato",
+      "api": "\"API y props antes de implementar\"",
+      "comment3": "// Entrega incremental",
+      "webVitals": "\"PRs pequeños, feedback rápido, sin big bangs\"",
+      "comment4": "// Déjalo mejor",
+      "testing": "\"refactoriza, documenta, luego cierra el ticket\"",
+      "nonNegotiable": " // innegociable"
+    },
+    "process": {
+      "understand": {
+        "label": "Entender",
+        "description": "Mapear requisitos funcionales y no funcionales. Preguntar qué necesita realmente el negocio — no solo lo que dice el ticket."
+      },
+      "architect": {
+        "label": "Diseñar",
+        "description": "Definir el contrato antes que el código. Flujo de datos, límites de componentes, forma de la API — primero en papel."
+      },
+      "build": {
+        "label": "Construir",
+        "description": "Iterativo e incremental. PRs pequeños, commits atómicos, feedback continuo del equipo y el backlog."
+      },
+      "ship": {
+        "label": "Entregar",
+        "description": "Code review, handoff a QA, demo del sprint. La entrega es un evento de equipo — no un push solitario a main."
+      },
+      "reflect": {
+        "label": "Mejorar",
+        "description": "Pensamiento de retrospectiva más allá de la ceremonia. Qué nos frenó, qué se puede automatizar, qué debe documentarse."
+      }
+    }
+  },
+  "cta": {
+    "label": "Qué sigue",
+    "heading": "Ahora mira el panorama técnico completo.",
+    "viewSkills": "Ver Habilidades",
+    "getInTouch": "Hablemos"
   },
   "metadata": {
     "title": "Sobre Mí — Sebastian Ballen",
-    "description": "Conoce la trayectoria de Sebastian Ballen como Ingeniero de Software Full-Stack, su enfoque para construir productos digitales y lo que impulsa su trabajo."
+    "description": "La historia detrás del ingeniero — el recorrido profesional de Sebastian Ballen, su enfoque técnico y lo que impulsa su trabajo como Desarrollador Full-Stack e Ingeniero GCP."
   }
 }
