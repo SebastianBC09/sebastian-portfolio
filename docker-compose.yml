@@ -1,12 +1,11 @@
 # ============================================
 # Sebastian Ballen Portfolio — Docker Compose
+# Uses pre-built image from GHCR (no local build)
 # ============================================
 
 services:
   portfolio:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: ghcr.io/sebastianbc09/portfolio:latest
     container_name: sebastian-portfolio
     restart: unless-stopped
     ports:
