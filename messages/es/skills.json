@@ -1,35 +1,76 @@
 {
-  "hero": {
-    "headline": "Habilidades y Experiencia",
-    "subheadline": "Tecnologías, herramientas y prácticas que uso para construir software escalable y de alto rendimiento."
+  "meta": {
+    "title": "Habilidades y Stack",
+    "description": "Una visión honesta de las herramientas que uso y dónde han sido desplegadas — no un desfile de logos, sino un mapa de decisiones reales en proyectos reales."
   },
+
+  "bridge": {
+    "headline": {
+      "line1": "Las herramientas",
+      "line2": "con las que pienso."
+    },
+    "description": "Una visión honesta de lo que uso y dónde ha sido desplegado — no un desfile de logos, sino un mapa de decisiones reales tomadas en proyectos reales."
+  },
+
+  "certification": {
+    "label": "Certificación",
+    "sectionTitle": "Emitida por Google.",
+    "eyebrow": "Google Cloud · Associate Cloud Engineer",
+    "title": "Emitida por Google. Aplicada en producción.",
+    "description": "Validada a través de trabajo práctico con Compute Engine, Cloud Storage, políticas de IAM y pipelines de CI/CD corriendo en GCP."
+  },
+
+  "grid": {
+    "label": "Stack Completo",
+    "title": "Cada capa, trazada.",
+    "description": "Selecciona una categoría. Las habilidades están agrupadas de lo exploratorio a lo probado en batalla.",
+    "tablistLabel": "Categorías de tecnología",
+    "technologiesLabel": "tecnologías",
+    "foundations": {
+      "label": "// fundamentos",
+      "description": "El medio, no las herramientas — presente en cada línea de trabajo"
+    }
+  },
+
+  "tiers": {
+    "familiar": { "label": "Familiar" },
+    "proficient": { "label": "Competente" },
+    "production": { "label": "Production" }
+  },
+
   "categories": {
     "frontend": {
-      "title": "Frontend",
-      "description": "Construyendo interfaces de usuario pulidas, accesibles y de alto rendimiento."
+      "label": "Frontend",
+      "annotation": "Donde la precisión se encuentra con la percepción — la capa que los usuarios realmente sienten."
     },
     "backend": {
-      "title": "Backend",
-      "description": "Diseñando APIs, servicios y capas de datos que escalan."
+      "label": "Backend",
+      "annotation": "En su mayoría autodidacta más allá de los fundamentos. Suficiente para construir servicios reales y saber cuándo parar y preguntar."
     },
     "cloud": {
-      "title": "Cloud y DevOps",
-      "description": "Infraestructura, pipelines de despliegue y arquitectura cloud."
+      "label": "Cloud & DevOps",
+      "annotation": "Certificado en GCP, desplegado en AWS. Trato la infraestructura como código — versionarla, documentarla, no improvisar."
     },
     "tools": {
-      "title": "Herramientas y Prácticas",
-      "description": "Control de versiones, testing, documentación y flujo de desarrollo."
+      "label": "Herramientas y Prácticas",
+      "annotation": "Los hábitos que hacen el trabajo confiable. No es glamoroso, pero es la diferencia entre un codebase que heredas y uno que temes."
     }
   },
-  "certifications": {
-    "heading": "Certificaciones",
-    "gcp": {
-      "title": "Google Cloud Associate Cloud Engineer",
-      "issuer": "Google Cloud"
+
+  "character": {
+    "label": "Carácter",
+    "title": "Cómo realmente me presento.",
+    "description": "No es una lista de habilidades blandas. Son observaciones honestas sobre cómo pienso, trabajo y me relaciono con las personas — el tipo de cosas que solo sabrías después de un mes trabajando juntos.",
+    "statements": {
+      "clarity": "Los problemas complejos no me estresan. Los problemas poco claros sí — así que primero los aclaro.",
+      "directions": "Pienso en múltiples direcciones antes de comprometerme con una. Toma un momento. El momento vale la pena.",
+      "tangents": "Me desvío. Exploro tangentes. Vuelvo con algo que la línea recta nunca hubiera encontrado.",
+      "slowDown": "Prefiero bajar el ritmo para tener claridad desde el principio que avanzar rápido hacia lo que no es.",
+      "overengineering": "El sobre-ingeniería es su propia forma de deshonestidad — señala complejidad donde no la hay.",
+      "feedback": "El feedback sobre mi trabajo no me incomoda. Es la forma más rápida que conozco de mejorar.",
+      "curious": "Me genera curiosidad genuina la persona detrás de los requerimientos, no solo los requerimientos.",
+      "understand": "No solo entrego código. Me aseguro de que la persona a mi lado entienda por qué funciona como funciona.",
+      "calm": "Me mantengo tranquilo cuando las cosas se ponen intensas. No porque sea indiferente, sino porque alguien tiene que hacerlo."
     }
-  },
-  "metadata": {
-    "title": "Habilidades — Sebastian Ballen",
-    "description": "Explora las habilidades técnicas de Sebastian Ballen en frontend, backend, cloud y DevOps — incluyendo React, TypeScript, Node.js, GCP, AWS y Docker."
   }
 }
