@@ -50,10 +50,11 @@ export async function generateMetadata({
     description: t('siteDescription'),
     metadataBase: new URL('https://bccloudsolutions.dev'),
     alternates: {
-      canonical: `/${locale}`,
+      canonical: `https://bccloudsolutions.dev/${locale}`,
       languages: {
-        en: '/en',
-        es: '/es',
+        en: 'https://bccloudsolutions.dev/en',
+        es: 'https://bccloudsolutions.dev/es',
+        'x-default': 'https://bccloudsolutions.dev/en',
       },
     },
     openGraph: {
@@ -63,28 +64,63 @@ export async function generateMetadata({
       siteName: 'Sebastian Ballen',
       locale: locale === 'es' ? 'es_CO' : 'en_US',
       type: 'website',
+      images: [
+        {
+          url: '/opengraph-image',
+          width: 1200,
+          height: 630,
+          alt: t('siteTitle'),
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: t('siteTitle'),
       description: t('siteDescription'),
+      images: ['/opengraph-image'],
     },
     robots: {
       index: true,
       follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
     },
   };
 }
 
-// export const metadata: Metadata = {
-//   title: {
-//     default: 'Sebastian Ballen — Software Engineer & Experience Architect',
-//     template: '%s | Sebastian Ballen',
-//   },
-//   description:
-//     'Full-Stack Software Developer and Google Cloud Associate Cloud Engineer. I design with precision and bring ideas to life with polished interfaces.',
-//   metadataBase: new URL('https://bccloudsolutions.dev'),
-// };
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Juan Sebastian Ballen Castañeda',
+  alternateName: 'Sebastian Ballen',
+  jobTitle: 'Full-Stack Software Developer',
+  description:
+    'Full-Stack Software Developer and Google Cloud Associate Cloud Engineer based in Bogotá, Colombia.',
+  url: 'https://bccloudsolutions.dev',
+  image: 'https://bccloudsolutions.dev/opengraph-image',
+  sameAs: [
+    'https://github.com/SebastianBC09',
+    'https://www.linkedin.com/in/sebastianballencastaneda-softwaredeveloper',
+  ],
+  knowsAbout: [
+    'React',
+    'Next.js',
+    'TypeScript',
+    'Node.js',
+    'Google Cloud Platform',
+    'Docker',
+    'Full-Stack Development',
+  ],
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Bogotá',
+    addressCountry: 'CO',
+  },
+};
 
 export default async function LocaleLayout({
   children,
@@ -109,6 +145,12 @@ export default async function LocaleLayout({
       className={`${outfit.variable} ${dmSans.variable} ${jetbrainsMono.variable}`}
       suppressHydrationWarning
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
+      </head>
       <body
         className="min-h-screen bg-bg-primary text-text-primary font-body antialiased"
         suppressHydrationWarning
