@@ -1,7 +1,7 @@
-import { Hero } from '@/components/sections/Hero';
-import { FeaturedProjects } from '@/components/sections/FeaturedProjects';
-import { ProcessSection } from '@/components/sections/ProcessSection';
-import { ContactCta } from '@/components/sections/ContactCta';
+import { Hero } from '@/app/[locale]/_components/Hero';
+import { FeaturedProjects } from '@/app/[locale]/_components/FeaturedProjects';
+import { ProcessSection } from '@/app/[locale]/_components/ProcessSection';
+import { ContactCta } from '@/app/[locale]/_components/ContactCta';
 import { setRequestLocale } from 'next-intl/server';
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {

@@ -6,7 +6,7 @@ import { Outfit, DM_Sans, JetBrains_Mono } from 'next/font/google';
 
 import { routing } from '@/i18n/routing';
 import { ThemeProvider } from '@/components/providers/ThemeProvider';
-import { BlueprintAnnotations } from '@/components/sections/BlueprintAnnotations';
+import { BlueprintAnnotations } from '@/components/layout/BlueprintAnnotations';
 import { BlueprintGrid } from '@/components/layout/BlueprintGrid';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
