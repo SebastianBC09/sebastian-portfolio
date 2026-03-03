@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 
-import { SkillsBridge } from '@/components/sections/skills/SkillsBridge';
-import { CertificationHighlight } from '@/components/sections/skills/CertificationHighlight';
-import { SkillsGrid } from '@/components/sections/skills/SkillsGrid';
-import { CharacterSection } from '@/components/sections/skills/CharacterSection';
+import { SkillsBridge } from '@/app/[locale]/skills/_components/SkillsBridge';
+import { CertificationHighlight } from '@/app/[locale]/skills/_components/CertificationHighlight';
+import { SkillsGrid } from '@/app/[locale]/skills/_components/SkillsGrid';
+import { CharacterSection } from '@/app/[locale]/skills/_components/CharacterSection';
 
 export async function generateMetadata({
   params,
