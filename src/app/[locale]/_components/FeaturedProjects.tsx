@@ -25,7 +25,7 @@ const PROJECT_META: Record<string, Omit<ProjectCardData, 'title' | 'description'
     tags: ['Swift', 'SwiftUI', 'iOS'],
     highlights: [],
     href: '/projects/swift-challenge',
-    status: 'in-progress',
+    status: 'locked',
   },
   mystery: {
     id: 'mystery',
