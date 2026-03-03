@@ -6,11 +6,8 @@
   },
   "timeline": {
     "label": "Mi Trayectoria",
-    "heading": "Dos caminos, un ingeniero",
-    "tracks": {
-      "professional": "Profesional",
-      "academic": "Académico"
-    },
+    "heading": "Dos caminos, un desarrollador",
+    "tracks": { "professional": "Profesional", "academic": "Académico" },
     "entries": {
       "fasterSolutions": {
         "role": "Pasante de Desarrollo de Software",
@@ -132,7 +129,7 @@
     "getInTouch": "Hablemos"
   },
   "metadata": {
-    "title": "Sobre Mí — Sebastian Ballen",
-    "description": "La historia detrás del ingeniero — el recorrido profesional de Sebastian Ballen, su enfoque técnico y lo que impulsa su trabajo como Desarrollador Full-Stack e Ingeniero GCP."
+    "title": "Sobre mí",
+    "description": "La historia detrás del desarrollador — el recorrido profesional de Sebastian Ballen, su enfoque técnico y lo que impulsa su trabajo como Desarrollador Full-Stack y Google Cloud Engineer."
   }
 }

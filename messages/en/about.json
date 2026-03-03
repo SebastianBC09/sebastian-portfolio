@@ -6,7 +6,7 @@
   },
   "timeline": {
     "label": "My Journey",
-    "heading": "Two tracks, one engineer",
+    "heading": "Two tracks, one developer",
     "tracks": {
       "professional": "Professional",
       "academic": "Academic"
@@ -132,7 +132,7 @@
     "getInTouch": "Get in touch"
   },
   "metadata": {
-    "title": "About — Sebastian Ballen",
-    "description": "The story behind the engineer — Sebastian Ballen's professional journey, technical approach, and what drives his work as a Full-Stack Developer and GCP Engineer."
+    "title": "About",
+    "description": "The story behind the developer — Sebastian Ballen's professional journey, technical approach, and what drives his work as a Full-Stack Developer and Google Cloud Engineer."
   }
 }
