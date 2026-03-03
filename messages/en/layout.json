@@ -1,34 +1,46 @@
 {
   "header": {
+    "logoAlt": "Sebastian Ballen — Home",
     "nav": {
-      "projects": "Projects",
       "about": "About",
+      "projects": "Projects",
       "skills": "Skills",
       "blog": "Blog",
       "contact": "Contact"
     },
     "actions": {
-      "openMenu": "Open menu",
-      "closeMenu": "Close menu",
-      "toggleTheme": "Toggle theme"
-    },
-    "logoAlt": "Sebastian Ballen — Software Engineer"
-  },
-  "footer": {
-    "copyright": "© {year} Sebastian Ballen — Designer Engineer",
-    "tagline": "Blueprints that come to life.",
-    "builtWith": "Built with Next.js, TypeScript & Tailwind CSS",
-    "links": {
-      "github": "GitHub",
-      "linkedin": "LinkedIn"
+      "openMenu": "Open navigation menu",
+      "closeMenu": "Close navigation menu"
     }
   },
-  "languageSwitcher": {
-    "label": "Change language",
-    "switchTo": "Cambiar a Español"
+  "footer": {
+    "copyright": "© {year} Juan Sebastian Ballen Castañeda",
+    "tagline": "/* blueprints coming to life */",
+    "builtWith": "Built with Next.js · Deployed on DigitalOcean",
+    "links": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "contact": "Contact"
+    }
   },
   "metadata": {
-    "siteTitle": "Sebastian Ballen — Full-Stack Software Engineer",
-    "siteDescription": "Software Engineer who designs digital experiences with the precision of an architect and the creativity of a designer. Portfolio showcasing full-stack projects, cloud architecture, and scalable systems."
+    "siteTitle": "Sebastian Ballen — Full-Stack Developer & Cloud Engineer",
+    "siteDescription": "Full-Stack Software Developer and Google Cloud Associate Cloud Engineer based in Bogotá, Colombia. I design systems with precision and bring ideas to life with polished interfaces.",
+    "home": {
+      "title": "Full-Stack Developer & Cloud Engineer",
+      "description": "Full-Stack Software Developer and Google Cloud Associate Cloud Engineer based in Bogotá, Colombia. I design systems with precision and bring ideas to life with polished interfaces."
+    },
+    "about": {
+      "title": "About",
+      "description": "The story behind the developer — background, experience, and the approach I bring to every project."
+    },
+    "skills": {
+      "title": "Skills",
+      "description": "A structured look at my technical toolkit — frontend, backend, cloud, and the tools I rely on daily."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Open to the right conversations — new projects, collaborations, or just a good technical discussion."
+    }
   }
 }

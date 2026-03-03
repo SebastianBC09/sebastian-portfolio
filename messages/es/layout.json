@@ -1,34 +1,46 @@
 {
   "header": {
+    "logoAlt": "Sebastian Ballen — Inicio",
     "nav": {
-      "projects": "Proyectos",
       "about": "Sobre mí",
+      "projects": "Proyectos",
       "skills": "Habilidades",
       "blog": "Blog",
       "contact": "Contacto"
     },
     "actions": {
-      "openMenu": "Abrir menú",
-      "closeMenu": "Cerrar menú",
-      "toggleTheme": "Cambiar tema"
-    },
-    "logoAlt": "Sebastian Ballen — Ingeniero de Software"
-  },
-  "footer": {
-    "copyright": "© {year} Sebastian Ballen — Ingeniero Diseñador",
-    "tagline": "Blueprints que cobran vida.",
-    "builtWith": "Hecho con Next.js, TypeScript y Tailwind CSS",
-    "links": {
-      "github": "GitHub",
-      "linkedin": "LinkedIn"
+      "openMenu": "Abrir menú de navegación",
+      "closeMenu": "Cerrar menú de navegación"
     }
   },
-  "languageSwitcher": {
-    "label": "Cambiar idioma",
-    "switchTo": "Switch to English"
+  "footer": {
+    "copyright": "© {year} Juan Sebastian Ballen Castañeda",
+    "tagline": "/* planos que cobran vida */",
+    "builtWith": "Construido con Next.js · Desplegado en DigitalOcean",
+    "links": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "contact": "Contacto"
+    }
   },
   "metadata": {
-    "siteTitle": "Sebastian Ballen — Ingeniero de Software Full-Stack",
-    "siteDescription": "Ingeniero de Software que diseña experiencias digitales con la precisión de un arquitecto y la creatividad de un diseñador. Portafolio de proyectos full-stack, arquitectura cloud y sistemas escalables."
+    "siteTitle": "Sebastian Ballen — Desarrollador Full-Stack & Cloud Engineer",
+    "siteDescription": "Desarrollador de Software Full-Stack y Google Cloud Associate Cloud Engineer desde Bogotá, Colombia. Diseño sistemas con precisión y doy vida a las ideas con interfaces cuidadas.",
+    "home": {
+      "title": "Desarrollador Full-Stack & Cloud Engineer",
+      "description": "Desarrollador de Software Full-Stack y Google Cloud Associate Cloud Engineer desde Bogotá, Colombia. Diseño sistemas con precisión y doy vida a las ideas con interfaces cuidadas."
+    },
+    "about": {
+      "title": "Sobre mí",
+      "description": "La historia detrás del desarrollador — trayectoria, experiencia y el enfoque que aporto a cada proyecto."
+    },
+    "skills": {
+      "title": "Habilidades",
+      "description": "Una visión estructurada de mi kit técnico — frontend, backend, cloud y las herramientas en las que confío cada día."
+    },
+    "contact": {
+      "title": "Contacto",
+      "description": "Abierto a las conversaciones correctas — nuevos proyectos, colaboraciones o simplemente una buena discusión técnica."
+    }
   }
 }
