@@ -12,24 +12,34 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'skills.meta' });
+  // Uses layout.metadata namespace for consistency — skills has no separate
+  // metadata namespace. If skills.metadata keys are added later, switch to that.
+  const t = await getTranslations({ locale, namespace: 'layout.metadata' });
 
   return {
-    title: t('title'),
-    description: t('description'),
+    title: t('skills.title'),
+    description: t('skills.description'),
     alternates: {
-      canonical: `/${locale}/skills`,
+      canonical: `https://bccloudsolutions.dev/${locale}/skills`,
       languages: {
-        en: '/en/skills',
-        es: '/es/skills',
+        en: 'https://bccloudsolutions.dev/en/skills',
+        es: 'https://bccloudsolutions.dev/es/skills',
+        'x-default': 'https://bccloudsolutions.dev/en/skills',
       },
     },
     openGraph: {
-      title: t('title'),
-      description: t('description'),
+      title: t('skills.title'),
+      description: t('skills.description'),
       url: `https://bccloudsolutions.dev/${locale}/skills`,
       locale: locale === 'es' ? 'es_CO' : 'en_US',
       type: 'website',
+      images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: t('skills.title') }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('skills.title'),
+      description: t('skills.description'),
+      images: ['/opengraph-image'],
     },
   };
 }
