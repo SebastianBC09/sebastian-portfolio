@@ -1,46 +1,45 @@
 {
-  "hero": {
-    "headline": "Get in Touch",
-    "subheadline": "Have a project in mind, want to discuss architecture, or just want to connect? I'd love to hear from you."
+  "bridge": {
+    "headline": {
+      "line1": "Got a project in mind?",
+      "line2": "Let's talk."
+    },
+    "description": "I'm open to full-time roles, freelance projects, and technical conversations worth having."
+  },
+  "options": {
+    "label": "Get in touch",
+    "title": "Reach out directly",
+    "description": "No contact form, no ticket system. Pick your preferred channel and say hello.",
+    "email": {
+      "label": "Email",
+      "hint": "Copy address",
+      "copied": "Copied!",
+      "responseHint": "Usually replies within 24h"
+    },
+    "linkedin": {
+      "label": "LinkedIn",
+      "description": "Professional conversations, career opportunities, or just a solid technical connection.",
+      "cta": "Connect"
+    },
+    "github": {
+      "label": "GitHub",
+      "description": "See the code behind the work — open source contributions, side projects, and this portfolio.",
+      "cta": "Explore"
+    },
+    "whatsapp": {
+      "label": "WhatsApp",
+      "description": "Prefer a quick message? Reach out directly — ideal for fast questions or intro calls.",
+      "cta": "Message"
+    },
+    "availability": {
+      "open": "Open to opportunities",
+      "closed": "Not available"
+    }
   },
   "form": {
-    "fields": {
-      "name": {
-        "label": "Your name",
-        "placeholder": "John Doe"
-      },
-      "email": {
-        "label": "Your email",
-        "placeholder": "john@example.com"
-      },
-      "subject": {
-        "label": "Subject",
-        "placeholder": "Project collaboration"
-      },
-      "message": {
-        "label": "Message",
-        "placeholder": "Tell me about your project or idea..."
-      }
-    },
-    "actions": {
-      "submit": "Send message",
-      "submitting": "Sending..."
-    },
-    "feedback": {
-      "success": "Message sent! I'll get back to you soon.",
-      "error": "Something went wrong. Please try again or email me directly."
+    "placeholder": {
+      "label": "Contact form — coming in v2",
+      "description": "/* drafting · not yet deployed */"
     }
-  },
-  "alternatives": {
-    "heading": "Or reach me directly",
-    "email": "sebastian.ballenc@gmail.com",
-    "links": {
-      "github": "GitHub",
-      "linkedin": "LinkedIn"
-    }
-  },
-  "metadata": {
-    "title": "Contact — Sebastian Ballen",
-    "description": "Get in touch with Sebastian Ballen for project collaboration, architecture consulting, or engineering mentoring."
   }
 }
