@@ -14,13 +14,17 @@
     }
   },
   "footer": {
+    "navigate": "Navigate",
+    "connect": "Connect",
     "copyright": "© {year} Juan Sebastian Ballen Castañeda",
     "tagline": "/* blueprints coming to life */",
     "builtWith": "Built with Next.js · Deployed on DigitalOcean",
     "links": {
       "github": "GitHub",
       "linkedin": "LinkedIn",
-      "contact": "Contact"
+      "contact": "Contact",
+      "about": "About",
+      "skills": "Skills"
     }
   },
   "metadata": {

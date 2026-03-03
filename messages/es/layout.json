@@ -14,13 +14,17 @@
     }
   },
   "footer": {
+    "navigate": "Navegar",
+    "connect": "Conectar",
     "copyright": "© {year} Juan Sebastian Ballen Castañeda",
     "tagline": "/* planos que cobran vida */",
     "builtWith": "Construido con Next.js · Desplegado en DigitalOcean",
     "links": {
       "github": "GitHub",
       "linkedin": "LinkedIn",
-      "contact": "Contacto"
+      "contact": "Contacto",
+      "about": "Sobre mí",
+      "skills": "Habilidades"
     }
   },
   "metadata": {
