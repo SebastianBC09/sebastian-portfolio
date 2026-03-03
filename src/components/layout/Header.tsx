@@ -8,7 +8,7 @@ import { ThemeToggle } from './ThemeToggle';
 import { LanguageSwitcher } from '@/components/layout/LanguageSwitcher';
 import { Menu, X } from 'lucide-react';
 
-const NAV_KEYS = ['projects', 'about', 'skills', 'blog'] as const;
+const NAV_KEYS = ['about', 'projects', 'skills', 'blog'] as const;
 
 const NAV_HREFS: Record<(typeof NAV_KEYS)[number], string> = {
   projects: '/projects',
