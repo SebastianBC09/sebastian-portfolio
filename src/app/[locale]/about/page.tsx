@@ -1,9 +1,9 @@
 import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
-import { AboutBridge } from '@/components/sections/about/AboutBridge';
-import { DualTimeline } from '@/components/sections/about/DualTimeline';
-import { HowIWork } from '@/components/sections/about/HowIWork';
-import { Recognition } from '@/components/sections/about/Recognition';
+import { AboutBridge } from '@/app/[locale]/about/_components/AboutBridge';
+import { DualTimeline } from '@/app/[locale]/about/_components/DualTimeline';
+import { HowIWork } from '@/app/[locale]/about/_components/HowIWork';
+import { Recognition } from '@/app/[locale]/about/_components/Recognition';
 
 export async function generateMetadata({
   params,
