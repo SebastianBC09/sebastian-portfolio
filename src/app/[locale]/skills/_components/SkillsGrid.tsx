@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Reveal } from '@/components/ui/Reveal';
 import { SectionHeading } from '@/components/ui/SectionHeading';
@@ -406,7 +406,7 @@ export function SkillsGrid() {
             </span>
             {/* Blueprint spec annotation */}
             <span
-              className="ml-auto text-[9px] font-mono tracking-[0.1em] uppercase"
+              className="ml-auto text-[9px] font-mono tracking-widest uppercase"
               style={{ color: activeCat.accent, opacity: 0.3 }}
               aria-hidden="true"
             >
@@ -465,8 +465,8 @@ export function SkillsGrid() {
             if (!skills.length) return null;
 
             return (
-              <>
-                <TierDivider key={`${tier.id}-divider`} tier={tier} label={tierLabels[tier.id]} />
+              <Fragment key={tier.id}>
+                <TierDivider tier={tier} label={tierLabels[tier.id]} />
                 {skills.map((skill, i) => (
                   <Reveal key={skill.name} delay={i * 0.04}>
                     <SkillChip
@@ -477,7 +477,7 @@ export function SkillsGrid() {
                     />
                   </Reveal>
                 ))}
-              </>
+              </Fragment>
             );
           })}
         </div>
