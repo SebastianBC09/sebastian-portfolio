@@ -58,7 +58,7 @@ export function CertificationHighlight() {
               style={{ color: ACCENT, opacity: 0.3 }}
               aria-hidden="true"
             >
-              CERT · ISSUED 2024
+              CERT · ISSUED 2025
             </span>
 
             {/* ── Ghost GCP monogram — bottom right ──
