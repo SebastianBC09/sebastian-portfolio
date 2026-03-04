@@ -37,9 +37,9 @@
         "title": "Apple Swift Student Challenge 2026",
         "hook": "Algo se está construyendo para el escaparate estudiantil más competitivo de Apple. Una fecha límite que no se mueve y un problema que vale la pena resolver."
       },
-      "mystery": {
-        "title": "???",
-        "hook": "Todavía no es momento de hablar de esto."
+      "transmilenio": {
+        "title": "Transmilenio Router",
+        "hook": "Motor de enrutamiento basado en grafos para el BRT de Bogotá — encuentra rutas óptimas con menos transbordos y soporta consultas en lenguaje natural en español e inglés."
       }
     }
   },
