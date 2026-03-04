@@ -38,7 +38,11 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       <article
         onMouseEnter={() => !isLocked && setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        onClick={() => !isLocked && project.href && (window.location.href = project.href)}
+        onClick={() => {
+          if (!isLocked && project.href) {
+            window.open(project.href, '_blank', 'noopener,noreferrer');
+          }
+        }}
         className={cn(
           'relative rounded-2xl overflow-hidden transition-all duration-500 group h-full',
           'border',
