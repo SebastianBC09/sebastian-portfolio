@@ -14,7 +14,7 @@ const PROJECT_META: Record<string, Omit<ProjectCardData, 'title' | 'description'
     accentBg: 'color-mix(in srgb, var(--color-accent-lime) 7%, var(--color-bg-card))',
     tags: ['Arduino', 'Arduino IDE', 'Java', 'Sensors'],
     highlights: ['University Recognition', 'Scalable Design', 'Data-Driven'],
-    href: '/projects/smart-agriculture',
+    href: 'https://github.com/SebastianBC09/AgroTech2.0-App',
     status: 'live',
   },
   swiftChallenge: {
@@ -27,19 +27,19 @@ const PROJECT_META: Record<string, Omit<ProjectCardData, 'title' | 'description'
     href: '/projects/swift-challenge',
     status: 'locked',
   },
-  mystery: {
-    id: 'mystery',
-    context: '· · ·',
+  transmilenio: {
+    id: 'transmilenio',
+    context: 'Personal Project',
     accent: 'var(--color-accent-amber)',
     accentBg: 'color-mix(in srgb, var(--color-accent-amber) 7%, var(--color-bg-card))',
-    tags: [],
-    highlights: [],
-    href: '',
-    status: 'locked',
+    tags: ['Python', 'NetworkX', 'NLP / LLM', 'Graph Theory', 'CLI', 'Groq'],
+    highlights: ['Graph-based routing', 'Natural language queries', 'Bilingual'],
+    href: 'https://github.com/SebastianBC09/transmilenio-router',
+    status: 'live',
   },
 };
 
-const PROJECT_KEYS = ['agriculture', 'swiftChallenge', 'mystery'] as const;
+const PROJECT_KEYS = ['agriculture', 'swiftChallenge', 'transmilenio'] as const;
 
 export function FeaturedProjects() {
   const t = useTranslations('home.featuredProjects');
@@ -74,7 +74,11 @@ export function FeaturedProjects() {
 
         <div className="mt-12 flex items-center gap-4">
           <div className="flex-1 h-px" style={{ background: 'var(--color-stroke-grid)' }} />
-          <Link href="/projects">
+          <Link
+            href="https://github.com/SebastianBC09?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Button variant="ghost" size="md">
               {t('viewAll')} →
             </Button>
