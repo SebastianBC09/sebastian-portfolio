@@ -12,9 +12,18 @@
       "getInTouch": "Let's talk"
     },
     "stats": {
-      "experience": { "value": "3+", "label": "Years of experience" },
-      "certification": { "value": "GCP", "label": "Certified cloud engineer" },
-      "language": { "value": "EN/ES", "label": "Bilingual professional" }
+      "experience": {
+        "value": "3+",
+        "label": "Years of experience"
+      },
+      "certification": {
+        "value": "GCP",
+        "label": "Certified cloud engineer"
+      },
+      "language": {
+        "value": "EN/ES",
+        "label": "Bilingual professional"
+      }
     },
     "visual": {
       "wireframeAlt": "Wireframe transforming into a finished interface",
@@ -22,28 +31,26 @@
     },
     "scrollHint": "Scroll"
   },
-
   "featuredProjects": {
     "label": "Featured Projects",
     "heading": "Featured Projects",
     "description": "Case studies where I combined design, architecture, and product thinking.",
     "viewAll": "View all projects",
     "cards": {
-      "agriculture": {
-        "title": "Smart Agriculture IoT",
+      "agrotech": {
+        "title": "AgroTech 2.0",
         "hook": "Arduino sensors, a Java desktop app, and a real problem worth solving — a data-driven approach to water management that got noticed."
       },
-      "swiftChallenge": {
-        "title": "Apple Swift Student Challenge 2026",
-        "hook": "Something is being built for Apple's most competitive student showcase. A deadline that doesn't move and a problem worth solving."
-      },
-      "transmilenio": {
+      "transmilenio-router": {
         "title": "Transmilenio Router",
         "hook": "A graph-based routing engine for Bogotá's BRT system — finds optimal routes with fewer transfers and supports natural language queries in Spanish and English."
+      },
+      "portfolio": {
+        "title": "This Portfolio",
+        "hook": "A bilingual, statically generated portfolio built on Next.js 15, Docker, and DigitalOcean — designed around a 'Blueprints Coming to Life' metaphor."
       }
     }
   },
-
   "process": {
     "label": "My Process",
     "heading": "My Process — Blueprint to Product",
@@ -66,7 +73,6 @@
       }
     }
   },
-
   "contactCta": {
     "location": "Bogotá, Colombia",
     "title": "Let's build something",
