@@ -12,9 +12,18 @@
       "getInTouch": "Hablemos"
     },
     "stats": {
-      "experience": { "value": "3+", "label": "Años de experiencia" },
-      "certification": { "value": "GCP", "label": "Ingeniero cloud certificado" },
-      "language": { "value": "EN/ES", "label": "Profesional bilingüe" }
+      "experience": {
+        "value": "3+",
+        "label": "Años de experiencia"
+      },
+      "certification": {
+        "value": "GCP",
+        "label": "Ingeniero cloud certificado"
+      },
+      "language": {
+        "value": "EN/ES",
+        "label": "Profesional bilingüe"
+      }
     },
     "visual": {
       "wireframeAlt": "Wireframe transformándose en una interfaz terminada",
@@ -22,28 +31,26 @@
     },
     "scrollHint": "Desplazar"
   },
-
   "featuredProjects": {
     "label": "Proyectos Destacados",
     "heading": "Proyectos Destacados",
     "description": "Casos de estudio donde combiné diseño, arquitectura y pensamiento de producto.",
     "viewAll": "Ver todos los proyectos",
     "cards": {
-      "agriculture": {
-        "title": "Sistema IoT para Agricultura Inteligente",
+      "agrotech": {
+        "title": "AgroTech 2.0",
         "hook": "Sensores Arduino, una app de escritorio en Java y un problema real que valía la pena resolver — un enfoque basado en datos para la gestión del agua que no pasó desapercibido."
       },
-      "swiftChallenge": {
-        "title": "Apple Swift Student Challenge 2026",
-        "hook": "Algo se está construyendo para el escaparate estudiantil más competitivo de Apple. Una fecha límite que no se mueve y un problema que vale la pena resolver."
-      },
-      "transmilenio": {
+      "transmilenio-router": {
         "title": "Transmilenio Router",
         "hook": "Motor de enrutamiento basado en grafos para el BRT de Bogotá — encuentra rutas óptimas con menos transbordos y soporta consultas en lenguaje natural en español e inglés."
+      },
+      "portfolio": {
+        "title": "Este Portafolio",
+        "hook": "Un portafolio bilingüe generado estáticamente, construido sobre Next.js 15, Docker y DigitalOcean — diseñado alrededor de la metáfora 'Blueprints Coming to Life'."
       }
     }
   },
-
   "process": {
     "label": "Mi Proceso",
     "heading": "Mi Proceso — Del Plano al Producto",
@@ -66,7 +73,6 @@
       }
     }
   },
-
   "contactCta": {
     "location": "Bogotá, Colombia",
     "title": "Construyamos algo",
