@@ -1,53 +1,25 @@
-'use client';
-
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { Button } from '@/components/ui/Button';
 import { SectionHeading } from '@/components/ui/SectionHeading';
-import { ProjectCard, type ProjectCardData } from '@/components/ui/ProjectCard';
-
-const PROJECT_META: Record<string, Omit<ProjectCardData, 'title' | 'description'>> = {
-  agriculture: {
-    id: 'agriculture',
-    context: 'UNINPAHU University',
-    accent: 'var(--color-accent-lime)',
-    accentBg: 'color-mix(in srgb, var(--color-accent-lime) 7%, var(--color-bg-card))',
-    tags: ['Arduino', 'Arduino IDE', 'Java', 'Sensors'],
-    highlights: ['University Recognition', 'Scalable Design', 'Data-Driven'],
-    href: 'https://github.com/SebastianBC09/AgroTech2.0-App',
-    status: 'live',
-  },
-  swiftChallenge: {
-    id: 'swiftChallenge',
-    context: 'Apple Challenge',
-    accent: 'var(--color-accent-coral)',
-    accentBg: 'color-mix(in srgb, var(--color-accent-coral) 7%, var(--color-bg-card))',
-    tags: ['Swift', 'SwiftUI', 'iOS'],
-    highlights: [],
-    href: '/projects/swift-challenge',
-    status: 'locked',
-  },
-  transmilenio: {
-    id: 'transmilenio',
-    context: 'Personal Project',
-    accent: 'var(--color-accent-amber)',
-    accentBg: 'color-mix(in srgb, var(--color-accent-amber) 7%, var(--color-bg-card))',
-    tags: ['Python', 'NetworkX', 'NLP / LLM', 'Graph Theory', 'CLI', 'Groq'],
-    highlights: ['Graph-based routing', 'Natural language queries', 'Bilingual'],
-    href: 'https://github.com/SebastianBC09/transmilenio-router',
-    status: 'live',
-  },
-};
-
-const PROJECT_KEYS = ['agriculture', 'swiftChallenge', 'transmilenio'] as const;
+import { ProjectCard } from '@/components/ui/ProjectCard';
+import { PROJECTS } from '@/content/projects';
 
 export function FeaturedProjects() {
   const t = useTranslations('home.featuredProjects');
+  const featured = PROJECTS.filter((p) => p.featured);
 
-  const projects: ProjectCardData[] = PROJECT_KEYS.map((key) => ({
-    ...PROJECT_META[key],
-    title: t(`cards.${key}.title`),
-    description: t(`cards.${key}.hook`),
+  const projects = featured.map((p) => ({
+    id: p.slug,
+    context: p.context,
+    title: t(`cards.${p.slug}.title`),
+    description: t(`cards.${p.slug}.hook`),
+    tags: p.tags,
+    highlights: p.highlights,
+    accent: p.accent,
+    accentBg: p.accentBg,
+    href: `/projects/${p.slug}`,
+    status: p.status === 'complete' ? ('live' as const) : p.status,
   }));
 
   return (
@@ -74,11 +46,7 @@ export function FeaturedProjects() {
 
         <div className="mt-12 flex items-center gap-4">
           <div className="flex-1 h-px" style={{ background: 'var(--color-stroke-grid)' }} />
-          <Link
-            href="https://github.com/SebastianBC09?tab=repositories"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link href="/projects">
             <Button variant="ghost" size="md">
               {t('viewAll')} →
             </Button>
