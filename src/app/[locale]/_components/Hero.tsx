@@ -1,9 +1,9 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/Button';
-import { Link } from '@/i18n/navigation';
 import { HeroVisual } from './HeroVisual';
 
 const stagger = {
