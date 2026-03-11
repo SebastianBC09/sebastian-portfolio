@@ -15,6 +15,7 @@ services:
       - NEXT_TELEMETRY_DISABLED=1
       - CONTACT_EMAIL=${CONTACT_EMAIL}
       - CONTACT_WA_NUMBER=${CONTACT_WA_NUMBER}
+      - SANITY_WEBHOOK_SECRET=${SANITY_WEBHOOK_SECRET}
     healthcheck:
       test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000"]
       interval: 30s
