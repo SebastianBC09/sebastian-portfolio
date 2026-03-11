@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Skills & Stack",
-    "description": "A grounded view of the tools I reach for — not a logo parade, but a map of real decisions made in real codebases."
+    "description": "A grounded view of the tools I reach for. Not a logo parade, but a map of real decisions made in real codebases."
   },
 
   "bridge": {
@@ -9,7 +9,7 @@
       "line1": "The tools",
       "line2": "I think with."
     },
-    "description": "A grounded view of what I reach for and where it's been deployed — not a logo parade, but a map of real decisions made in real codebases."
+    "description": "A grounded view of what I reach for and where it's been deployed. Not a logo parade, but a map of real decisions made in real codebases."
   },
 
   "certification": {
@@ -28,7 +28,7 @@
     "technologiesLabel": "technologies",
     "foundations": {
       "label": "// foundations",
-      "description": "The medium, not the tools — present in every line of work"
+      "description": "The medium, not the tools. Present in every line of work."
     }
   },
 
@@ -41,7 +41,7 @@
   "categories": {
     "frontend": {
       "label": "Frontend",
-      "annotation": "Where precision meets perception — the layer users actually feel."
+      "annotation": "Where precision meets perception. The layer users actually feel."
     },
     "backend": {
       "label": "Backend",
@@ -49,7 +49,7 @@
     },
     "cloud": {
       "label": "Cloud & DevOps",
-      "annotation": "Certified on GCP, deployed on AWS. I treat infrastructure like code — version it, document it, don't improvise it."
+      "annotation": "Certified on GCP, deployed on AWS. I treat infrastructure like code: version it, document it, don't improvise it."
     },
     "tools": {
       "label": "Tools & Practices",
@@ -60,13 +60,13 @@
   "character": {
     "label": "Character",
     "title": "How I actually show up.",
-    "description": "Not a list of soft skills. A few honest observations about how I think, work, and relate to people — the kind of things you'd only know after a month working together.",
+    "description": "Not a list of soft skills. A few honest observations about how I think, work, and relate to people. The kind of things you'd only know after a month working together.",
     "statements": {
-      "clarity": "Complex problems don't stress me. Unclear problems do — so I make them clear first.",
+      "clarity": "Complex problems don't stress me. Unclear problems do, so I make them clear first.",
       "directions": "I think in multiple directions before I commit to one. It takes a moment. The moment is worth it.",
       "tangents": "I digress. I explore tangents. I come back with something the straight line would have missed.",
       "slowDown": "I'd rather slow down for clarity upfront than move fast toward the wrong thing.",
-      "overengineering": "Over-engineering is its own kind of dishonesty — it signals complexity where there isn't any.",
+      "overengineering": "Over-engineering is its own kind of dishonesty. It signals complexity where there isn't any.",
       "feedback": "Feedback on my work isn't uncomfortable. It's the fastest way I know to get better.",
       "curious": "I get genuinely curious about the person behind the requirements, not just the requirements.",
       "understand": "I don't just ship code. I make sure the person next to me understands why it works the way it does.",

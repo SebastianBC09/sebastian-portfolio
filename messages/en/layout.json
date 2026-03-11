@@ -1,6 +1,6 @@
 {
   "header": {
-    "logoAlt": "Sebastian Ballen — Home",
+    "logoAlt": "Sebastian Ballen, Home",
     "nav": {
       "about": "About",
       "projects": "Projects",
@@ -24,11 +24,13 @@
       "linkedin": "LinkedIn",
       "contact": "Contact",
       "about": "About",
-      "skills": "Skills"
+      "skills": "Skills",
+      "projects": "Projects",
+      "blog": "Blog"
     }
   },
   "metadata": {
-    "siteTitle": "Sebastian Ballen — Full-Stack Developer & Cloud Engineer",
+    "siteTitle": "Sebastian Ballen | Full-Stack Developer & Cloud Engineer",
     "siteDescription": "Full-Stack Software Developer and Google Cloud Associate Cloud Engineer based in Bogotá, Colombia. I design systems with precision and bring ideas to life with polished interfaces.",
     "home": {
       "title": "Full-Stack Developer & Cloud Engineer",
@@ -36,15 +38,15 @@
     },
     "about": {
       "title": "About",
-      "description": "The story behind the developer — background, experience, and the approach I bring to every project."
+      "description": "The story behind the developer. Background, experience, and the approach I bring to every project."
     },
     "skills": {
       "title": "Skills",
-      "description": "A structured look at my technical toolkit — frontend, backend, cloud, and the tools I rely on daily."
+      "description": "A structured look at my technical toolkit. Frontend, backend, cloud, and the tools I rely on daily."
     },
     "contact": {
       "title": "Contact",
-      "description": "Open to the right conversations — new projects, collaborations, or just a good technical discussion."
+      "description": "Open to the right conversations. New projects, collaborations, or just a good technical discussion."
     }
   }
 }

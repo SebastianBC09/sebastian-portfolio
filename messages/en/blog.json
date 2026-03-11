@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Blog",
-    "description": "Engineering concepts, tools, languages, and the occasional book — written to be useful, not impressive."
+    "description": "Engineering concepts, tools, languages, and the occasional book. Written to be useful, not impressive."
   },
   "bridge": {
     "label": "Writing",
@@ -9,7 +9,7 @@
       "line1": "Thoughts Written",
       "line2": "With Precision."
     },
-    "description": "Engineering concepts, tools, languages, and the occasional book — written to be useful, not impressive."
+    "description": "Engineering concepts, tools, languages, and the occasional book. Written to be useful, not impressive."
   },
   "featured": {
     "label": "Featured",

@@ -2,7 +2,7 @@
   "bridge": {
     "headline1": "Ya viste lo que construyo.",
     "headline2": "Así llegué hasta aquí.",
-    "description": "Dos caminos paralelos — profesional y académico — corriendo al mismo tiempo."
+    "description": "Dos caminos paralelos, profesional y académico, corriendo al mismo tiempo."
   },
   "timeline": {
     "label": "Mi Trayectoria",
@@ -11,51 +11,51 @@
     "entries": {
       "fasterSolutions": {
         "role": "Pasante de Desarrollo de Software",
-        "org": "Faster Solutions — Duluth, MN",
-        "period": "Jun 2019 — Ago 2019",
+        "org": "Faster Solutions, Duluth MN",
+        "period": "Jun 2019 a Ago 2019",
         "description": "La distancia entre saber programar y escribir código que llega a producción es más grande de lo que cualquier aula sugiere. Este verano la cerró."
       },
       "magneto": {
         "role": "Desarrollador Full-Stack",
         "org": "Magneto Global",
-        "period": "Nov 2022 — Ago 2024",
-        "description": "Casi dos años en la plataforma de RR.HH. líder en Colombia — tráfico real, equipos reales, decisiones reales. Donde las buenas prácticas dejaron de ser teoría y se convirtieron en supervivencia."
+        "period": "Nov 2022 a Ago 2024",
+        "description": "Casi dos años en la plataforma de RR.HH. líder en Colombia. Tráfico real, equipos reales, decisiones reales. Donde las buenas prácticas dejaron de ser teoría y se convirtieron en supervivencia."
       },
       "cafeto": {
         "role": "Desarrollador Web",
-        "org": "Cafeto Software — Cliente: Pros",
-        "period": "Nov 2024 — Feb 2026",
-        "description": "Me uní a una librería UI madura que impulsa productos SaaS para aerolíneas — el tipo de codebase que enseña más que cualquier proyecto desde cero. Refactorizando, migrando y aprendiendo cómo los buenos equipos gestionan la deuda técnica."
+        "org": "Cafeto Software, Cliente: Pros",
+        "period": "Nov 2024 a Feb 2026",
+        "description": "Me uní a una librería UI madura que impulsa productos SaaS para aerolíneas. El tipo de codebase que enseña más que cualquier proyecto desde cero. Refactorizando, migrando y aprendiendo cómo los buenos equipos gestionan la deuda técnica."
       },
       "arroyo": {
         "role": "Desarrollador Frontend",
         "org": "Arroyo Consulting",
-        "period": "Feb 2022 — Oct 2022",
-        "description": "Primer equipo real, primera presión real de fechas. Trabajé en TimeTracker — una plataforma interna de registro de horas — y descubrí que los requisitos claros son un lujo, no una garantía."
+        "period": "Feb 2022 a Oct 2022",
+        "description": "Primer equipo real, primera presión real de fechas. Trabajé en TimeTracker, una plataforma interna de registro de horas, y descubrí que los requisitos claros son un lujo, no una garantía."
       },
       "platzi": {
         "role": "Bootcamp Platzi Master",
         "org": "Platzi",
-        "period": "Ene 2021 — Sep 2021",
-        "description": "Nueve meses yendo a fondo — React, Redux, GraphQL, y suficiente pensamiento arquitectónico para entender por qué importan las decisiones. El año que reformuló cómo abordo un problema."
+        "period": "Ene 2021 a Sep 2021",
+        "description": "Nueve meses yendo a fondo en React, Redux, GraphQL, y suficiente pensamiento arquitectónico para entender por qué importan las decisiones. El año que reformuló cómo abordo un problema."
       },
       "teinco": {
         "role": "Técnico Profesional en Sistemas",
         "org": "Teinco",
-        "period": "Feb 2022 — Sep 2023",
-        "description": "Base formal en sistemas y desarrollo de software — la capa académica que le da un lugar donde anclarse a la experiencia práctica."
+        "period": "Feb 2022 a Sep 2023",
+        "description": "Base formal en sistemas y desarrollo de software. La capa académica que le da un lugar donde anclarse a la experiencia práctica."
       },
       "uninpahu": {
-        "role": "Ing. de Software — En curso",
+        "role": "Ing. de Software, En curso",
         "org": "Universidad UNINPAHU",
-        "period": "Feb 2024 — Presente",
-        "description": "Sexto semestre — la parte de la carrera donde la teoría empieza a conectar con todo lo que ya has enviado a producción. AgroTech, un sistema IoT agrícola, recibió reconocimiento universitario en el primer semestre."
+        "period": "Feb 2024 a Presente",
+        "description": "Sexto semestre. La parte de la carrera donde la teoría empieza a conectar con todo lo que ya has enviado a producción. AgroTech, un sistema IoT agrícola, recibió reconocimiento universitario en el primer semestre."
       },
       "lakeSuperior": {
         "role": "A.S. Tecnología en Computación",
         "org": "Lake Superior College",
-        "period": "Ene 2017 — May 2019",
-        "description": "Dos años en Minnesota — estudiando en inglés, pensando en sistemas, aprendiendo a trabajar en espacios donde nadie se parecía a mí. La base sobre la que está construido todo lo demás."
+        "period": "Ene 2017 a May 2019",
+        "description": "Dos años en Minnesota. Estudiando en inglés, pensando en sistemas, aprendiendo a trabajar en espacios donde nadie se parecía a mí. La base sobre la que está construido todo lo demás."
       }
     }
   },
@@ -65,12 +65,12 @@
     "items": {
       "smartAgriculture": {
         "title": "Sistema Smart Agriculture",
-        "org": "Universidad UNINPAHU — Desarrollador Líder",
+        "org": "Universidad UNINPAHU, Desarrollador Líder",
         "description": "Prototipo de riego automatizado basado en Arduino usando sensores de humedad del suelo. Diseñé arquitectura escalable para recolección de datos agrícolas y optimización del uso del agua. Reconocimiento universitario, primer semestre 2024."
       },
       "gcpCert": {
         "title": "Google Cloud Associate Cloud Engineer",
-        "org": "Google Cloud — Certificado",
+        "org": "Google Cloud, Certificado",
         "description": "Certificado en infraestructura cloud, cómputo, almacenamiento e IAM en Google Cloud Platform. Experiencia práctica con Compute Engine, Cloud Storage y gestión de identidades."
       }
     }
@@ -79,11 +79,11 @@
     "label": "Cómo Trabajo",
     "heading": "Proceso, no solo ejecución",
     "terminal": {
-      "approach1": "→ Primero los requisitos. Funcionales y no funcionales — ambos importan.",
+      "approach1": "→ Primero los requisitos. Funcionales y no funcionales. Ambos importan.",
       "approach2": "  Entender el dominio del negocio antes que el stack tecnológico.",
       "methodology1": "→ Scrum por defecto. Planning, daily, review, retro.",
       "methodology2": "  Kanban cuando el trabajo no cabe en sprints.",
-      "tooling1": "→ Aumentado con IA, no dependiente de ella. Copilot y LLMs aceleran —",
+      "tooling1": "→ Aumentado con IA, no dependiente de ella. Copilot y LLMs aceleran,",
       "tooling2": "  pero las decisiones de arquitectura siguen siendo humanas.",
       "collab1": "→ El backlog es una conversación. Cerca del producto, cerca del equipo.",
       "collab2": "  La ambigüedad es un problema a resolver, no a entregar."
@@ -102,11 +102,11 @@
     "process": {
       "understand": {
         "label": "Entender",
-        "description": "Mapear requisitos funcionales y no funcionales. Preguntar qué necesita realmente el negocio — no solo lo que dice el ticket."
+        "description": "Mapear requisitos funcionales y no funcionales. Preguntar qué necesita realmente el negocio, no solo lo que dice el ticket."
       },
       "architect": {
         "label": "Diseñar",
-        "description": "Definir el contrato antes que el código. Flujo de datos, límites de componentes, forma de la API — primero en papel."
+        "description": "Definir el contrato antes que el código. Flujo de datos, límites de componentes, forma de la API. Primero en papel."
       },
       "build": {
         "label": "Construir",
@@ -114,7 +114,7 @@
       },
       "ship": {
         "label": "Entregar",
-        "description": "Code review, handoff a QA, demo del sprint. La entrega es un evento de equipo — no un push solitario a main."
+        "description": "Code review, handoff a QA, demo del sprint. La entrega es un evento de equipo, no un push solitario a main."
       },
       "reflect": {
         "label": "Mejorar",
@@ -130,6 +130,6 @@
   },
   "metadata": {
     "title": "Sobre mí",
-    "description": "La historia detrás del desarrollador — el recorrido profesional de Sebastian Ballen, su enfoque técnico y lo que impulsa su trabajo como Desarrollador Full-Stack y Google Cloud Engineer."
+    "description": "La historia detrás del desarrollador. El recorrido profesional de Sebastian Ballen, su enfoque técnico y lo que impulsa su trabajo como Desarrollador Full-Stack y Google Cloud Engineer."
   }
 }

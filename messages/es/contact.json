@@ -23,12 +23,12 @@
     },
     "github": {
       "label": "GitHub",
-      "description": "Mira el código detrás del trabajo — contribuciones open source, proyectos personales y este portafolio.",
+      "description": "Mira el código detrás del trabajo: contribuciones open source, proyectos personales y este portafolio.",
       "cta": "Explorar"
     },
     "whatsapp": {
       "label": "WhatsApp",
-      "description": "¿Prefieres un mensaje rápido? Escríbeme directamente — ideal para preguntas o llamadas de introducción.",
+      "description": "¿Prefieres un mensaje rápido? Escríbeme directamente. Ideal para preguntas o llamadas de introducción.",
       "cta": "Mensaje"
     },
     "availability": {
@@ -38,7 +38,7 @@
   },
   "form": {
     "placeholder": {
-      "label": "Formulario de contacto — disponible en v2",
+      "label": "Formulario de contacto, disponible en v2",
       "description": "/* en desarrollo · próximamente */"
     }
   }

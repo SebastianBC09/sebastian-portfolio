@@ -6,7 +6,7 @@
       "line2": "& Cloud",
       "line3": "Engineer"
     },
-    "subheadline": "I build digital products from frontend to cloud — with clean architecture, real performance impact, and a focus on what users actually need.",
+    "subheadline": "I build digital products from frontend to cloud. Clean architecture, real performance impact, and a focus on what users actually need.",
     "cta": {
       "viewProjects": "View projects",
       "getInTouch": "Let's talk"
@@ -53,7 +53,7 @@
   },
   "process": {
     "label": "My Process",
-    "heading": "My Process — Blueprint to Product",
+    "heading": "My Process: Blueprint to Product",
     "description": "A structured approach that balances architectural rigor with creative problem-solving.",
     "steps": {
       "blueprint": {
@@ -77,7 +77,7 @@
     "location": "Bogotá, Colombia",
     "title": "Let's build something",
     "titleAccent": "extraordinary.",
-    "subtitle": "Whether you're looking for a full-stack engineer, want to talk architecture, or just want to connect — I'd love to hear from you.",
+    "subtitle": "Whether you're looking for a full-stack engineer, want to talk architecture, or just want to connect. I'd love to hear from you.",
     "cta": {
       "email": "Send a message",
       "cv": "Download CV"

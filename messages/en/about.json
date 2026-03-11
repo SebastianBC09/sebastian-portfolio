@@ -2,7 +2,7 @@
   "bridge": {
     "headline1": "You've seen what I build.",
     "headline2": "Here's how I got there.",
-    "description": "Two parallel tracks — professional and academic — running simultaneously."
+    "description": "Two parallel tracks, professional and academic, running simultaneously."
   },
   "timeline": {
     "label": "My Journey",
@@ -14,51 +14,51 @@
     "entries": {
       "fasterSolutions": {
         "role": "Software Developer Intern",
-        "org": "Faster Solutions — Duluth, MN",
-        "period": "Jun 2019 — Aug 2019",
+        "org": "Faster Solutions, Duluth MN",
+        "period": "Jun 2019 to Aug 2019",
         "description": "The gap between knowing how to code and writing code that ships is wider than any classroom suggests. This summer closed it."
       },
       "magneto": {
         "role": "Full-Stack Developer",
         "org": "Magneto Global",
-        "period": "Nov 2022 — Aug 2024",
-        "description": "Nearly two years on Colombia's leading HR platform — real traffic, real teams, real tradeoffs. Where best practices stopped being theory and started being survival."
+        "period": "Nov 2022 to Aug 2024",
+        "description": "Nearly two years on Colombia's leading HR platform. Real traffic, real teams, real tradeoffs. Where best practices stopped being theory and started being survival."
       },
       "cafeto": {
         "role": "Web Developer",
-        "org": "Cafeto Software — Client: Pros",
-        "period": "Nov 2024 — Feb 2026",
-        "description": "Joined a mature UI library powering airline SaaS products — the kind of codebase that teaches you more than a greenfield ever could. Refactoring, migrating, and learning how good teams handle technical debt."
+        "org": "Cafeto Software, Client: Pros",
+        "period": "Nov 2024 to Feb 2026",
+        "description": "Joined a mature UI library powering airline SaaS products. The kind of codebase that teaches you more than a greenfield ever could. Refactoring, migrating, and learning how good teams handle technical debt."
       },
       "arroyo": {
         "role": "Frontend Developer",
         "org": "Arroyo Consulting",
-        "period": "Feb 2022 — Oct 2022",
-        "description": "First real team, first real deadline pressure. Worked on TimeTracker — an internal hour-logging platform — and discovered that clean requirements are a luxury, not a given."
+        "period": "Feb 2022 to Oct 2022",
+        "description": "First real team, first real deadline pressure. Worked on TimeTracker, an internal hour-logging platform, and discovered that clean requirements are a luxury, not a given."
       },
       "platzi": {
         "role": "Platzi Master Bootcamp",
         "org": "Platzi",
-        "period": "Jan 2021 — Sep 2021",
-        "description": "Nine months going deep — React, Redux, GraphQL, and enough architecture thinking to know why the choices matter. The year that reframed how I approach a problem."
+        "period": "Jan 2021 to Sep 2021",
+        "description": "Nine months going deep into React, Redux, GraphQL, and enough architecture thinking to know why the choices matter. The year that reframed how I approach a problem."
       },
       "teinco": {
         "role": "Técnico Profesional en Sistemas",
         "org": "Teinco",
-        "period": "Feb 2022 — Sep 2023",
-        "description": "Formal grounding in systems and software development — the academic layer that gives the hands-on experience somewhere to anchor."
+        "period": "Feb 2022 to Sep 2023",
+        "description": "Formal grounding in systems and software development. The academic layer that gives the hands-on experience somewhere to anchor."
       },
       "uninpahu": {
         "role": "B.S. Software Engineering",
         "org": "UNINPAHU University",
-        "period": "Feb 2024 — Present",
-        "description": "6th semester — the part of engineering school where the theory starts connecting to everything you've already shipped. AgroTech, an IoT agriculture system, got university recognition in the first semester."
+        "period": "Feb 2024 to Present",
+        "description": "6th semester. The part of engineering school where the theory starts connecting to everything you've already shipped. AgroTech, an IoT agriculture system, got university recognition in the first semester."
       },
       "lakeSuperior": {
         "role": "A.S. Computer Technology",
         "org": "Lake Superior College",
-        "period": "Jan 2017 — May 2019",
-        "description": "Two years in Minnesota — studying in English, thinking in systems, learning to work in rooms where nobody looked like me. The foundation everything else is built on."
+        "period": "Jan 2017 to May 2019",
+        "description": "Two years in Minnesota. Studying in English, thinking in systems, learning to work in rooms where nobody looked like me. The foundation everything else is built on."
       }
     }
   },
@@ -68,12 +68,12 @@
     "items": {
       "smartAgriculture": {
         "title": "Smart Agriculture System",
-        "org": "UNINPAHU University — Lead Developer",
+        "org": "UNINPAHU University, Lead Developer",
         "description": "Arduino-based automated irrigation prototype using soil moisture sensors. Designed scalable architecture for crop data collection and water optimization. Received university recognition, first semester 2024."
       },
       "gcpCert": {
         "title": "Google Cloud Associate Cloud Engineer",
-        "org": "Google Cloud — Certified",
+        "org": "Google Cloud, Certified",
         "description": "Certified in cloud infrastructure, compute, storage, and IAM on Google Cloud Platform. Practical experience with Compute Engine, Cloud Storage, and identity management."
       }
     }
@@ -82,11 +82,11 @@
     "label": "How I Work",
     "heading": "Process, not just craft",
     "terminal": {
-      "approach1": "→ Requirements first. Functional and non-functional — both matter.",
+      "approach1": "→ Requirements first. Functional and non-functional. Both matter.",
       "approach2": "  Understanding the business domain before the tech stack.",
       "methodology1": "→ Scrum by default. Sprint planning, daily, review, retro.",
       "methodology2": "  Kanban when the work doesn't fit in boxes.",
-      "tooling1": "→ AI-augmented, not AI-dependent. Copilot and LLMs accelerate —",
+      "tooling1": "→ AI-augmented, not AI-dependent. Copilot and LLMs accelerate",
       "tooling2": "  but the architectural decisions stay human.",
       "collab1": "→ Backlog is a conversation. Close to product, close to the team.",
       "collab2": "  Ambiguity is a problem to solve, not to ship."
@@ -105,11 +105,11 @@
     "process": {
       "understand": {
         "label": "Understand",
-        "description": "Map functional and non-functional requirements. Ask what the business actually needs — not just what was written in the ticket."
+        "description": "Map functional and non-functional requirements. Ask what the business actually needs, not just what was written in the ticket."
       },
       "architect": {
         "label": "Design",
-        "description": "Define the contract before the code. Data flow, component boundaries, API shape — on paper first."
+        "description": "Define the contract before the code. Data flow, component boundaries, API shape. On paper first."
       },
       "build": {
         "label": "Build",
@@ -117,7 +117,7 @@
       },
       "ship": {
         "label": "Deliver",
-        "description": "Code review, QA handoff, sprint demo. Delivery is a team event — not a solo push to main."
+        "description": "Code review, QA handoff, sprint demo. Delivery is a team event, not a solo push to main."
       },
       "reflect": {
         "label": "Improve",
@@ -133,6 +133,6 @@
   },
   "metadata": {
     "title": "About",
-    "description": "The story behind the developer — Sebastian Ballen's professional journey, technical approach, and what drives his work as a Full-Stack Developer and Google Cloud Engineer."
+    "description": "The story behind the developer. Sebastian Ballen's professional journey, technical approach, and what drives his work as a Full-Stack Developer and Google Cloud Engineer."
   }
 }

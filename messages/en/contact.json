@@ -23,12 +23,12 @@
     },
     "github": {
       "label": "GitHub",
-      "description": "See the code behind the work — open source contributions, side projects, and this portfolio.",
+      "description": "See the code behind the work. Open source contributions, side projects, and this portfolio.",
       "cta": "Explore"
     },
     "whatsapp": {
       "label": "WhatsApp",
-      "description": "Prefer a quick message? Reach out directly — ideal for fast questions or intro calls.",
+      "description": "Prefer a quick message? Reach out directly. Ideal for fast questions or intro calls.",
       "cta": "Message"
     },
     "availability": {
@@ -38,7 +38,7 @@
   },
   "form": {
     "placeholder": {
-      "label": "Contact form — coming in v2",
+      "label": "Contact form, coming in v2",
       "description": "/* drafting · not yet deployed */"
     }
   }

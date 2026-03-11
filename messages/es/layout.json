@@ -1,6 +1,6 @@
 {
   "header": {
-    "logoAlt": "Sebastian Ballen — Inicio",
+    "logoAlt": "Sebastian Ballen, Inicio",
     "nav": {
       "about": "Sobre mí",
       "projects": "Proyectos",
@@ -24,11 +24,13 @@
       "linkedin": "LinkedIn",
       "contact": "Contacto",
       "about": "Sobre mí",
-      "skills": "Habilidades"
+      "skills": "Habilidades",
+      "projects": "Proyectos",
+      "blog": "Blog"
     }
   },
   "metadata": {
-    "siteTitle": "Sebastian Ballen — Desarrollador Full-Stack & Cloud Engineer",
+    "siteTitle": "Sebastian Ballen | Desarrollador Full-Stack & Cloud Engineer",
     "siteDescription": "Desarrollador de Software Full-Stack y Google Cloud Associate Cloud Engineer desde Bogotá, Colombia. Diseño sistemas con precisión y doy vida a las ideas con interfaces cuidadas.",
     "home": {
       "title": "Desarrollador Full-Stack & Cloud Engineer",
@@ -36,15 +38,15 @@
     },
     "about": {
       "title": "Sobre mí",
-      "description": "La historia detrás del desarrollador — trayectoria, experiencia y el enfoque que aporto a cada proyecto."
+      "description": "La historia detrás del desarrollador. Trayectoria, experiencia y el enfoque que aporto a cada proyecto."
     },
     "skills": {
       "title": "Habilidades",
-      "description": "Una visión estructurada de mi kit técnico — frontend, backend, cloud y las herramientas en las que confío cada día."
+      "description": "Una visión estructurada de mi kit técnico: frontend, backend, cloud y las herramientas en las que confío cada día."
     },
     "contact": {
       "title": "Contacto",
-      "description": "Abierto a las conversaciones correctas — nuevos proyectos, colaboraciones o simplemente una buena discusión técnica."
+      "description": "Abierto a las conversaciones correctas. Nuevos proyectos, colaboraciones o simplemente una buena discusión técnica."
     }
   }
 }

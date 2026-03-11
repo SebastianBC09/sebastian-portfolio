@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Habilidades y Stack",
-    "description": "Una visión honesta de las herramientas que uso y dónde han sido desplegadas — no un desfile de logos, sino un mapa de decisiones reales en proyectos reales."
+    "description": "Una visión honesta de las herramientas que uso y dónde han sido desplegadas. No un desfile de logos, sino un mapa de decisiones reales en proyectos reales."
   },
 
   "bridge": {
@@ -9,7 +9,7 @@
       "line1": "Las herramientas",
       "line2": "con las que pienso."
     },
-    "description": "Una visión honesta de lo que uso y dónde ha sido desplegado — no un desfile de logos, sino un mapa de decisiones reales tomadas en proyectos reales."
+    "description": "Una visión honesta de lo que uso y dónde ha sido desplegado. No un desfile de logos, sino un mapa de decisiones reales tomadas en proyectos reales."
   },
 
   "certification": {
@@ -28,7 +28,7 @@
     "technologiesLabel": "tecnologías",
     "foundations": {
       "label": "// fundamentos",
-      "description": "El medio, no las herramientas — presente en cada línea de trabajo"
+      "description": "El medio, no las herramientas. Presente en cada línea de trabajo"
     }
   },
 
@@ -41,7 +41,7 @@
   "categories": {
     "frontend": {
       "label": "Frontend",
-      "annotation": "Donde la precisión se encuentra con la percepción — la capa que los usuarios realmente sienten."
+      "annotation": "Donde la precisión se encuentra con la percepción. La capa que los usuarios realmente sienten."
     },
     "backend": {
       "label": "Backend",
@@ -49,7 +49,7 @@
     },
     "cloud": {
       "label": "Cloud & DevOps",
-      "annotation": "Certificado en GCP, desplegado en AWS. Trato la infraestructura como código — versionarla, documentarla, no improvisar."
+      "annotation": "Certificado en GCP, desplegado en AWS. Trato la infraestructura como código: versionarla, documentarla, no improvisar."
     },
     "tools": {
       "label": "Herramientas y Prácticas",
@@ -60,13 +60,13 @@
   "character": {
     "label": "Carácter",
     "title": "Cómo realmente me presento.",
-    "description": "No es una lista de habilidades blandas. Son observaciones honestas sobre cómo pienso, trabajo y me relaciono con las personas — el tipo de cosas que solo sabrías después de un mes trabajando juntos.",
+    "description": "No es una lista de habilidades blandas. Son observaciones honestas sobre cómo pienso, trabajo y me relaciono con las personas. El tipo de cosas que solo sabrías después de un mes trabajando juntos.",
     "statements": {
-      "clarity": "Los problemas complejos no me estresan. Los problemas poco claros sí — así que primero los aclaro.",
+      "clarity": "Los problemas complejos no me estresan. Los problemas poco claros sí, así que primero los aclaro.",
       "directions": "Pienso en múltiples direcciones antes de comprometerme con una. Toma un momento. El momento vale la pena.",
       "tangents": "Me desvío. Exploro tangentes. Vuelvo con algo que la línea recta nunca hubiera encontrado.",
       "slowDown": "Prefiero bajar el ritmo para tener claridad desde el principio que avanzar rápido hacia lo que no es.",
-      "overengineering": "El sobre-ingeniería es su propia forma de deshonestidad — señala complejidad donde no la hay.",
+      "overengineering": "El sobre-ingeniería es su propia forma de deshonestidad. Señala complejidad donde no la hay.",
       "feedback": "El feedback sobre mi trabajo no me incomoda. Es la forma más rápida que conozco de mejorar.",
       "curious": "Me genera curiosidad genuina la persona detrás de los requerimientos, no solo los requerimientos.",
       "understand": "No solo entrego código. Me aseguro de que la persona a mi lado entienda por qué funciona como funciona.",

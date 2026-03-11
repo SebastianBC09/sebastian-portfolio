@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Blog",
-    "description": "Conceptos de ingeniería, herramientas, lenguajes y algún que otro libro — escrito para ser útil, no para impresionar."
+    "description": "Conceptos de ingeniería, herramientas, lenguajes y algún que otro libro. Escrito para ser útil, no para impresionar."
   },
   "bridge": {
     "label": "Escritura",
@@ -9,7 +9,7 @@
       "line1": "Ideas Escritas",
       "line2": "Con Precisión."
     },
-    "description": "Conceptos de ingeniería, herramientas, lenguajes y algún que otro libro — escrito para ser útil, no para impresionar."
+    "description": "Conceptos de ingeniería, herramientas, lenguajes y algún que otro libro. Escrito para ser útil, no para impresionar."
   },
   "featured": {
     "label": "Destacado",
