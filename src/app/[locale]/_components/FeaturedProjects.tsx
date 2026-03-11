@@ -5,6 +5,12 @@ import { SectionHeading } from '@/components/ui/SectionHeading';
 import { ProjectCard } from '@/components/ui/ProjectCard';
 import { PROJECTS } from '@/content/projects';
 
+const ACCENT_VARIANT_MAP: Record<string, 'cyan' | 'coral' | 'lime' | 'amber'> = {
+  agrotech: 'lime',
+  'transmilenio-router': 'cyan',
+  portfolio: 'amber',
+};
+
 export function FeaturedProjects() {
   const t = useTranslations('home.featuredProjects');
   const featured = PROJECTS.filter((p) => p.featured);
@@ -18,6 +24,7 @@ export function FeaturedProjects() {
     highlights: p.highlights,
     accent: p.accent,
     accentBg: p.accentBg,
+    accentVariant: ACCENT_VARIANT_MAP[p.slug] ?? 'cyan',
     href: `/projects/${p.slug}`,
     status: p.status === 'complete' ? ('live' as const) : p.status,
   }));
