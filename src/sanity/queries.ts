@@ -44,27 +44,27 @@ const POST_META_FIELDS = `
 
 export async function getAllPosts(): Promise<PostMeta[]> {
   return client.fetch(
-    `*[_type == "post" && defined(slug.current)]
+    `*[_type == "post" && defined(slug.current) && published == true]
      | order(date desc)[0...12]{ ${POST_META_FIELDS} }`,
     {},
-    { next: { revalidate: 30 } }
+    { cache: 'no-store' }
   );
 }
 
 export async function getPostBySlug(slug: string): Promise<PostFull | null> {
   return client.fetch(
-    `*[_type == "post" && slug.current == "${slug}" && defined(slug.current)][0]
+    `*[_type == "post" && slug.current == "${slug}" && defined(slug.current) && published == true][0]
      { ${POST_META_FIELDS}, body }`,
     {},
-    { next: { revalidate: 30 } }
+    { cache: 'no-store' }
   );
 }
 
 export async function getAllSlugs(): Promise<string[]> {
   const posts: { slug: string }[] = await client.fetch(
-    `*[_type == "post" && defined(slug.current)]{ "slug": slug.current }`,
+    `*[_type == "post" && defined(slug.current) && published == true]{ "slug": slug.current }`,
     {},
-    { next: { revalidate: 30 } }
+    { cache: 'no-store' }
   );
   return posts.map((p) => p.slug);
 }
