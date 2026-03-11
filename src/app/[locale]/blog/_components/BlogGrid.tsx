@@ -1,0 +1,86 @@
+'use client';
+
+import { useState } from 'react';
+import { useTranslations } from 'next-intl';
+import { PostCard } from '@/components/ui/PostCard';
+import { SectionHeading } from '@/components/ui/SectionHeading';
+import { Reveal } from '@/components/ui/Reveal';
+import { TagFilter } from './TagFilter';
+import type { PostMeta } from '@/sanity/queries';
+
+interface BlogGridProps {
+  posts: PostMeta[];
+}
+
+export function BlogGrid({ posts }: BlogGridProps) {
+  const t = useTranslations('blog');
+  const [activeTag, setActiveTag] = useState<string | null>(null);
+
+  const allTags = Array.from(new Set(posts.flatMap((p) => p.tags ?? []))).sort();
+
+  const filtered = activeTag ? posts.filter((p) => p.tags?.includes(activeTag)) : posts;
+
+  return (
+    <section className="max-w-6xl mx-auto px-6 pb-24">
+      {/* ── Section header ── */}
+      <Reveal>
+        <div className="flex items-center gap-4 mb-6">
+          <span
+            className="inline-flex items-center text-xs font-mono font-semibold tracking-[0.2em] uppercase px-3 py-1 rounded-full border shrink-0"
+            style={{
+              color: 'var(--color-accent-cyan)',
+              background: 'color-mix(in srgb, var(--color-accent-cyan) 8%, transparent)',
+              borderColor: 'color-mix(in srgb, var(--color-accent-cyan) 15%, transparent)',
+            }}
+          >
+            {t('grid.label')}
+          </span>
+
+          {/* Gradient rule */}
+          <div
+            className="flex-1 h-px"
+            style={{
+              background: 'linear-gradient(to right, var(--color-stroke), transparent)',
+            }}
+            aria-hidden="true"
+          />
+
+          {/* Live counter */}
+          <span
+            className="text-[11px] font-mono shrink-0"
+            style={{ color: 'var(--color-text-muted)' }}
+          >
+            {filtered.length} / {posts.length}
+          </span>
+        </div>
+      </Reveal>
+
+      {/* ── Tag filter ── */}
+      {allTags.length > 0 && (
+        <Reveal delay={0.06}>
+          <TagFilter tags={allTags} activeTag={activeTag} onTagChange={setActiveTag} />
+        </Reveal>
+      )}
+
+      {/* ── Post list ── */}
+      {filtered.length > 0 ? (
+        <div className="mt-6 flex flex-col gap-2">
+          {filtered.map((post, i) => (
+            <Reveal key={post.slug} delay={0.04 * i}>
+              <PostCard post={post} index={i} />
+            </Reveal>
+          ))}
+        </div>
+      ) : (
+        <Reveal delay={0.1}>
+          <p
+            className="mt-12 text-center text-sm font-mono"
+            style={{ color: 'var(--color-text-muted)' }}
+          >
+            {t('grid.empty')}
+          </p>
+        </Reveal>
+      )}
+    </section>
+  );
+}
