@@ -56,6 +56,9 @@ export async function generateMetadata({
         es: 'https://bccloudsolutions.dev/es',
         'x-default': 'https://bccloudsolutions.dev/en',
       },
+      types: {
+        'application/rss+xml': 'https://bccloudsolutions.dev/feed.xml',
+      },
     },
     openGraph: {
       title: t('siteTitle'),
