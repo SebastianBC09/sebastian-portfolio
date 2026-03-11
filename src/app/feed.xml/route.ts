@@ -1,7 +1,7 @@
 import { getAllPosts } from '@/sanity/queries';
 
 export async function GET() {
-  const posts = await getAllPosts('en');
+  const posts = await getAllPosts();
 
   const items = posts
     .map(
