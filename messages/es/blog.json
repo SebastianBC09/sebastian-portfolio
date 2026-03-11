@@ -1,0 +1,34 @@
+{
+  "metadata": {
+    "title": "Blog",
+    "description": "Conceptos de ingeniería, herramientas, lenguajes y algún que otro libro — escrito para ser útil, no para impresionar."
+  },
+  "bridge": {
+    "label": "Escritura",
+    "headline": {
+      "line1": "Ideas Escritas",
+      "line2": "Con Precisión."
+    },
+    "description": "Conceptos de ingeniería, herramientas, lenguajes y algún que otro libro — escrito para ser útil, no para impresionar."
+  },
+  "featured": {
+    "label": "Destacado",
+    "heading": "Empieza aquí."
+  },
+  "grid": {
+    "label": "Todos los posts",
+    "heading": "Explora por tema.",
+    "filterAll": "Todos",
+    "empty": "No se encontraron posts para esta etiqueta."
+  },
+  "post": {
+    "readingTime": "{n} min de lectura",
+    "updatedAt": "Actualizado {date}"
+  },
+  "categories": {
+    "fundamentals": "Fundamentos",
+    "languages": "Lenguajes",
+    "craft": "El Oficio",
+    "books": "Libros"
+  }
+}
