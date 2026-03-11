@@ -39,15 +39,15 @@
     "cards": {
       "agrotech": {
         "title": "AgroTech 2.0",
-        "hook": "Arduino sensors, a Java desktop app, and a real problem worth solving — a data-driven approach to water management that got noticed."
+        "hook": "Bogotá's 2024 drought made water rationing a daily reality. Built with my university team, AgroTech automates irrigation using Arduino sensors and lays the groundwork for a full crop analytics platform where technology finally serves Colombian agriculture, not the other way around."
       },
       "transmilenio-router": {
         "title": "Transmilenio Router",
-        "hook": "A graph-based routing engine for Bogotá's BRT system — finds optimal routes with fewer transfers and supports natural language queries in Spanish and English."
+        "hook": "Bogotá commuters lose hours every week to suboptimal routes. Existing apps are slow, incomplete, and force you through a clunky origin/destination UI. Transmilenio Router models the entire 141-station BRT network as a graph and lets you query it in plain language, because finding your route should not be the hard part of your commute."
       },
       "portfolio": {
         "title": "This Portfolio",
-        "hook": "A bilingual, statically generated portfolio built on Next.js 15, Docker, and DigitalOcean — designed around a 'Blueprints Coming to Life' metaphor."
+        "hook": "Most portfolios are just résumés with a coat of paint. This one is built to grow into something more: a blog where I write about computer science fundamentals and software engineering thinking, and a personal brand that communicates how I approach building, not just what I have built."
       }
     }
   },
