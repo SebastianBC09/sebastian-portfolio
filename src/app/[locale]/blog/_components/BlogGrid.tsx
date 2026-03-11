@@ -22,38 +22,7 @@ export function BlogGrid({ posts }: BlogGridProps) {
 
   return (
     <section className="max-w-6xl mx-auto px-6 pb-24">
-      {/* ── Section header ── */}
-      <Reveal>
-        <div className="flex items-center gap-4 mb-6">
-          <span
-            className="inline-flex items-center text-xs font-mono font-semibold tracking-[0.2em] uppercase px-3 py-1 rounded-full border shrink-0"
-            style={{
-              color: 'var(--color-accent-cyan)',
-              background: 'color-mix(in srgb, var(--color-accent-cyan) 8%, transparent)',
-              borderColor: 'color-mix(in srgb, var(--color-accent-cyan) 15%, transparent)',
-            }}
-          >
-            {t('grid.label')}
-          </span>
-
-          {/* Gradient rule */}
-          <div
-            className="flex-1 h-px"
-            style={{
-              background: 'linear-gradient(to right, var(--color-stroke), transparent)',
-            }}
-            aria-hidden="true"
-          />
-
-          {/* Live counter */}
-          <span
-            className="text-[11px] font-mono shrink-0"
-            style={{ color: 'var(--color-text-muted)' }}
-          >
-            {filtered.length} / {posts.length}
-          </span>
-        </div>
-      </Reveal>
+      <SectionHeading label={t('grid.label')} title={t('grid.heading')} />
 
       {/* ── Tag filter ── */}
       {allTags.length > 0 && (
