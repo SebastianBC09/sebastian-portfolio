@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
+import { useIsMobile } from '@/hooks/useIsMobile';
 import { ThemeToggle } from './ThemeToggle';
 import { LanguageSwitcher } from '@/components/layout/LanguageSwitcher';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
@@ -17,9 +18,6 @@ const NAV_HREFS: Record<(typeof NAV_KEYS)[number], string> = {
   blog: '/blog',
 };
 
-// ── Logo mark ─────────────────────────────────────────────────────────────
-// Blueprint corner registration marks appear on hover, tying the logo
-// to the annotation language used throughout the portfolio.
 function LogoMark() {
   return (
     <div className="relative w-10 h-10 flex items-center justify-center shrink-0 group/mark">
@@ -59,7 +57,7 @@ function LogoMark() {
         />
       </svg>
       <div
-        className="w-9 h-9 rounded-[10px] flex items-center justify-center font-mono font-bold text-sm transition-all duration-300 group-hover/mark:scale-105"
+        className="w-9 h-9 rounded-xl flex items-center justify-center font-mono font-bold text-sm transition-all duration-300 group-hover/mark:scale-105"
         style={{
           background: 'color-mix(in srgb, var(--color-accent-cyan) 10%, transparent)',
           border: '1.5px solid color-mix(in srgb, var(--color-accent-cyan) 25%, transparent)',
@@ -72,9 +70,6 @@ function LogoMark() {
   );
 }
 
-// ── Nav link ──────────────────────────────────────────────────────────────
-// Blueprint bracket characters [ ] fade in on hover, referencing the
-// annotation visual language from the hero and skills sections.
 function NavLink({
   href,
   isActive,
@@ -130,9 +125,6 @@ function NavLink({
   );
 }
 
-// ── Contact CTA ───────────────────────────────────────────────────────────
-// Shimmer sweep on hover makes it feel alive. Arrow nudges on hover
-// to signal navigation intent. Distinct rest / hover / active states.
 function ContactButton({
   href,
   isActive,
@@ -145,7 +137,7 @@ function ContactButton({
   return (
     <Link
       href={href}
-      className="group/contact relative ml-1 flex items-center gap-1.5 px-4 py-2 text-sm font-semibold rounded-lg transition-all duration-200 overflow-hidden outline-none focus-visible:ring-2 focus-visible:ring-accent-coral/40"
+      className="group/contact relative ml-2 flex items-center gap-1.5 px-4 py-2 text-sm font-semibold rounded-lg transition-all duration-200 overflow-hidden outline-none focus-visible:ring-2 focus-visible:ring-accent-coral/40"
       style={{
         color: 'var(--color-accent-coral)',
         background: isActive
@@ -175,26 +167,92 @@ function ContactButton({
   );
 }
 
+function MobileMenu({
+  isOpen,
+  onClose,
+  t,
+  checkIsActive,
+}: {
+  isOpen: boolean;
+  onClose: () => void;
+  t: ReturnType<typeof useTranslations>;
+  checkIsActive: (href: string) => boolean;
+}) {
+  const isContactActive = checkIsActive('/contact');
+
+  return (
+    <div
+      className={cn(
+        'overflow-hidden transition-all duration-300 ease-in-out',
+        isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 pointer-events-none'
+      )}
+      aria-hidden={!isOpen}
+      style={{
+        background: 'color-mix(in srgb, var(--color-bg-primary) 95%, transparent)',
+        backdropFilter: 'blur(20px)',
+      }}
+    >
+      <div className="px-6 py-4 space-y-2 border-b border-stroke-grid">
+        {NAV_KEYS.map((key) => {
+          const href = NAV_HREFS[key];
+          const isActive = checkIsActive(href);
+
+          return (
+            <Link
+              key={key}
+              href={href}
+              onClick={onClose}
+              className={cn(
+                'flex items-center gap-3 px-4 py-3 rounded-lg text-sm transition-colors',
+                isActive
+                  ? 'text-text-primary bg-bg-card'
+                  : 'text-text-muted hover:text-text-primary hover:bg-text-primary/5'
+              )}
+            >
+              {isActive && (
+                <span
+                  className="w-0.5 h-4 rounded-full shrink-0"
+                  style={{ background: 'var(--color-accent-cyan)' }}
+                />
+              )}
+              {t(`nav.${key}`)}
+            </Link>
+          );
+        })}
+
+        <Link
+          href="/contact"
+          onClick={onClose}
+          className={cn(
+            'block px-4 py-3 rounded-lg text-sm font-semibold transition-all border',
+            isContactActive
+              ? 'bg-accent-coral/20 text-accent-coral border-accent-coral/50'
+              : 'bg-accent-coral/12 text-accent-coral border-accent-coral/25'
+          )}
+        >
+          {t('nav.contact')}
+        </Link>
+      </div>
+    </div>
+  );
+}
+
 export function Header() {
   const t = useTranslations('layout.header');
   const pathname = usePathname();
+  const isMobile = useIsMobile();
   const [isScrolled, setIsScrolled] = useState(false);
-  // Store the pathname at the time the menu was opened.
-  // The menu is considered open only when this matches the current pathname.
-  // Route changes automatically close it — no effect, no setState in an effect.
   const [menuOpenForPath, setMenuOpenForPath] = useState<string | null>(null);
   const isMobileOpen = menuOpenForPath === pathname;
 
   useEffect(() => {
     const update = () => setIsScrolled(window.scrollY > 40);
-    update(); // Sync on mount — covers reload-at-bottom and pre-hydration fast scroll
+    update();
     window.addEventListener('scroll', update, { passive: true });
     return () => window.removeEventListener('scroll', update);
   }, []);
 
   const checkIsActive = (href: string) => pathname === href || pathname.startsWith(href + '/');
-
-  const isContactActive = checkIsActive('/contact');
 
   return (
     <header
@@ -218,7 +276,6 @@ export function Header() {
           aria-label={t('logoAlt')}
         >
           <LogoMark />
-
           <div className="hidden sm:flex flex-col leading-none gap-0.5">
             <span className="text-sm font-semibold text-text-primary group-hover/logolink:text-accent-cyan transition-colors duration-200">
               Sebastian Ballen
@@ -235,7 +292,7 @@ export function Header() {
         </Link>
 
         {/* ── Desktop nav ── */}
-        <div className="hidden md:flex items-center gap-0.5">
+        <div className="hidden md:flex items-center gap-1">
           {NAV_KEYS.map((key) => (
             <NavLink key={key} href={NAV_HREFS[key]} isActive={checkIsActive(NAV_HREFS[key])}>
               {t(`nav.${key}`)}
@@ -248,10 +305,8 @@ export function Header() {
             label={t('nav.contact')}
           />
 
-          {/* Separator */}
           <div className="w-px h-5 bg-stroke mx-2" />
 
-          {/* Language + Theme */}
           <LanguageSwitcher />
           <ThemeToggle />
         </div>
@@ -275,63 +330,15 @@ export function Header() {
         </div>
       </nav>
 
-      {/* ── Mobile menu ──
-           CSS max-h drives the slide animation. Fixed value (max-h-96) safely
-           covers any realistic menu height -- avoids height:auto CSS limitation.
-           pointer-events-none when closed prevents invisible tap targets.    */}
-      <div
-        className={cn(
-          'md:hidden overflow-hidden transition-all duration-300 ease-in-out',
-          isMobileOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 pointer-events-none'
-        )}
-        aria-hidden={!isMobileOpen}
-        style={{
-          background: 'color-mix(in srgb, var(--color-bg-primary) 95%, transparent)',
-          backdropFilter: 'blur(20px)',
-        }}
-      >
-        <div className="px-6 pb-6 pt-2 space-y-1 border-b border-stroke-grid">
-          {NAV_KEYS.map((key) => {
-            const href = NAV_HREFS[key];
-            const isActive = checkIsActive(href);
-
-            return (
-              <Link
-                key={key}
-                href={href}
-                onClick={() => setMenuOpenForPath(null)}
-                className={cn(
-                  'flex items-center gap-3 px-4 py-3 rounded-lg text-sm transition-colors',
-                  isActive
-                    ? 'text-text-primary bg-bg-card'
-                    : 'text-text-muted hover:text-text-primary hover:bg-text-primary/5'
-                )}
-              >
-                {isActive && (
-                  <span
-                    className="w-0.5 h-4 rounded-full shrink-0"
-                    style={{ background: 'var(--color-accent-cyan)' }}
-                  />
-                )}
-                {t(`nav.${key}`)}
-              </Link>
-            );
-          })}
-
-          <Link
-            href="/contact"
-            onClick={() => setMenuOpenForPath(null)}
-            className={cn(
-              'block px-4 py-3 rounded-lg text-sm font-semibold transition-all border',
-              isContactActive
-                ? 'bg-accent-coral/20 text-accent-coral border-accent-coral/50'
-                : 'bg-accent-coral/12 text-accent-coral border-accent-coral/25'
-            )}
-          >
-            {t('nav.contact')}
-          </Link>
-        </div>
-      </div>
+      {/* ── Mobile menu — only mounted on mobile ── */}
+      {isMobile && (
+        <MobileMenu
+          isOpen={isMobileOpen}
+          onClose={() => setMenuOpenForPath(null)}
+          t={t}
+          checkIsActive={checkIsActive}
+        />
+      )}
     </header>
   );
 }
