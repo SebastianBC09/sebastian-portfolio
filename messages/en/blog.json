@@ -1,0 +1,34 @@
+{
+  "metadata": {
+    "title": "Blog",
+    "description": "Engineering concepts, tools, languages, and the occasional book — written to be useful, not impressive."
+  },
+  "bridge": {
+    "label": "Writing",
+    "headline": {
+      "line1": "Thoughts Written",
+      "line2": "With Precision."
+    },
+    "description": "Engineering concepts, tools, languages, and the occasional book — written to be useful, not impressive."
+  },
+  "featured": {
+    "label": "Featured",
+    "heading": "Start here."
+  },
+  "grid": {
+    "label": "All Posts",
+    "heading": "Browse by topic.",
+    "filterAll": "All",
+    "empty": "No posts found for this tag."
+  },
+  "post": {
+    "readingTime": "{n} min read",
+    "updatedAt": "Updated {date}"
+  },
+  "categories": {
+    "fundamentals": "Fundamentals",
+    "languages": "Languages",
+    "craft": "The Craft",
+    "books": "Books"
+  }
+}
